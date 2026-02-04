@@ -82,7 +82,7 @@ class MLPPolicy(BasePolicy, nn.Module, metaclass=abc.ABCMeta):
 
         # TODO return the action that the policy prescribes
         policy_distribution = self.forward(ptu.from_numpy(observation))
-        action = policy_distribution.sample()
+        action = policy_distribution.mean  # Use mean for deterministic action (BC)
         return ptu.to_numpy(action)
 
     # update/train this policy
