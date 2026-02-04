@@ -143,6 +143,8 @@ class RL_Trainer(object):
                     print('\nSaving agent params')
                     self.agent.save('{}/policy_itr_{}.pt'.format(self.params['logdir'], itr))
 
+            return itr, paths, eval_policy, train_video_paths, training_logs
+
     ####################################
     ####################################
 
