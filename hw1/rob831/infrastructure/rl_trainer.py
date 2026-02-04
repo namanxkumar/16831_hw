@@ -96,7 +96,6 @@ class RL_Trainer(object):
         self.total_envsteps = 0
         self.start_time = time.time()
 
-        returns = []
         for itr in range(n_iter):
             print("\n\n********** Iteration %i ************"%itr)
 
@@ -143,10 +142,6 @@ class RL_Trainer(object):
                 if self.params['save_params']:
                     print('\nSaving agent params')
                     self.agent.save('{}/policy_itr_{}.pt'.format(self.params['logdir'], itr))
-
-            returns.append((itr, paths, eval_policy, train_video_paths, training_logs))
-
-        return returns
 
     ####################################
     ####################################
