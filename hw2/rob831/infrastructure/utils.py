@@ -104,6 +104,60 @@ def sample_n_trajectories(env, policy, ntraj, max_path_length, render=False, ren
     return paths
 
 ############################################
+# BONUS: Parallel trajectory collection
+############################################
+
+def _worker_collect(args):
+    """Worker function for parallel trajectory collection."""
+    env_name, policy_state, max_path_length, discrete, ob_dim, ac_dim, n_layers, size = args
+    import gym
+    import torch
+    from rob831.infrastructure import pytorch_util as ptu
+    from rob831.policies.MLP_policy import MLPPolicyPG
+
+    env = gym.make(env_name)
+    # Create a fresh policy and load weights
+    policy = MLPPolicyPG(ac_dim, ob_dim, n_layers, size, discrete=discrete)
+    policy.load_state_dict(policy_state)
+    policy.eval()
+
+    path = sample_trajectory(env, policy, max_path_length)
+    env.close()
+    return path
+
+
+def sample_trajectories_parallel(env, policy, min_timesteps_per_batch, max_path_length, n_workers=4):
+    """Parallel version of sample_trajectories using multiprocessing."""
+    import multiprocessing as mp
+    from functools import partial
+
+    env_name = env.spec.id
+    policy_state = {k: v.cpu() for k, v in policy.state_dict().items()}
+    discrete = policy.discrete
+    ob_dim = policy.ob_dim
+    ac_dim = policy.ac_dim
+    n_layers = policy.n_layers
+    size = policy.size
+
+    worker_args = (env_name, policy_state, max_path_length, discrete, ob_dim, ac_dim, n_layers, size)
+
+    paths = []
+    timesteps_this_batch = 0
+
+    ctx = mp.get_context('spawn')
+    with ctx.Pool(processes=n_workers) as pool:
+        while timesteps_this_batch < min_timesteps_per_batch:
+            # Launch n_workers trajectories in parallel
+            results = pool.map(_worker_collect, [worker_args] * n_workers)
+            for path in results:
+                paths.append(path)
+                timesteps_this_batch += get_pathlength(path)
+                if timesteps_this_batch >= min_timesteps_per_batch:
+                    break
+
+    return paths, timesteps_this_batch
+
+############################################
 ############################################
 
 def Path(obs, image_obs, acs, rewards, next_obs, terminals):

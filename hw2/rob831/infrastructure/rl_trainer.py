@@ -159,10 +159,16 @@ class RL_Trainer(object):
                 loaded_paths = pickle.load(f)
             return loaded_paths, 0, None
 
-        print("\nCollecting data to be used for training...")
-        paths, envsteps_this_batch = utils.sample_trajectories(
-            self.env, collect_policy, batch_size, self.params['ep_len']
-        )
+      print("\nCollecting data to be used for training...")
+      if self.params.get('n_workers', 1) > 1:
+          paths, envsteps_this_batch = utils.sample_trajectories_parallel(
+              self.env, collect_policy, batch_size, self.params['ep_len'],
+              n_workers=self.params['n_workers']
+          )
+      else:
+          paths, envsteps_this_batch = utils.sample_trajectories(
+              self.env, collect_policy, batch_size, self.params['ep_len']
+          )
 
         train_video_paths = None
         if self.log_video:
