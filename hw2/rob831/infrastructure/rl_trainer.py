@@ -62,7 +62,9 @@ class RL_Trainer(object):
             matplotlib.use('Agg')
 
         # Maximum length for episodes
-        self.params['ep_len'] = self.params['ep_len'] or self.env.spec.max_episode_steps
+        if not self.params['ep_len']:
+            spec = getattr(self.env, 'spec', None)
+            self.params['ep_len'] = spec.max_episode_steps if spec else 1000
         global MAX_VIDEO_LEN
         MAX_VIDEO_LEN = self.params['ep_len']
 
@@ -85,8 +87,10 @@ class RL_Trainer(object):
             self.fps = 1/self.env.model.opt.timestep
         elif 'env_wrappers' in self.params:
             self.fps = 30 # This is not actually used when using the Monitor wrapper
-        elif 'video.frames_per_second' in self.env.env.metadata.keys():
+        elif hasattr(self.env, 'env') and 'video.frames_per_second' in self.env.env.metadata.keys():
             self.fps = self.env.env.metadata['video.frames_per_second']
+        elif 'render_fps' in self.env.metadata:
+            self.fps = self.env.metadata['render_fps']
         else:
             self.fps = 10
 
