@@ -133,7 +133,7 @@ def _get_pool(n_workers):
     global _parallel_pool
     if _parallel_pool is None:
         import multiprocessing as mp
-        ctx = mp.get_context('fork')
+        ctx = mp.get_context('spawn')
         _parallel_pool = ctx.Pool(processes=n_workers)
     return _parallel_pool
 
