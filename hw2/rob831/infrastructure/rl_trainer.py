@@ -45,7 +45,11 @@ class RL_Trainer(object):
         #############
 
         # Make the gym environment
-        self.env = gym.make(self.params['env_name'])
+        if self.params['env_name'] == 'LunarLanderContinuous-v2':
+            from lunar_lander import LunarLander
+            self.env = LunarLander(continuous=True)
+        else:
+            self.env = gym.make(self.params['env_name'])
         self.env.seed(seed)
 
         # Add noise wrapper
