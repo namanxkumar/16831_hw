@@ -115,6 +115,9 @@ def _worker_collect(args):
     from rob831.infrastructure import pytorch_util as ptu
     from rob831.policies.MLP_policy import MLPPolicyPG
 
+    if not hasattr(np, 'bool8'):
+        np.bool8 = np.bool_
+
     env = gym.make(env_name)
     # Create a fresh policy and load weights
     policy = MLPPolicyPG(ac_dim, ob_dim, n_layers, size, discrete=discrete)

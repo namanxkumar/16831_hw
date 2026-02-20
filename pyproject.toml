@@ -1,0 +1,84 @@
+# 16-831 Statistical Techniques in Robotics — unified Python environment
+#
+# Prerequisites (system, one-time):
+#   xcode-select --install            # Clang + command-line tools (to compile the
+#                                     # mujoco_py Cython extension on first import)
+#   brew install glfw                 # mujoco 2.2.x imports GLFW unconditionally;
+#                                     # glfw 1.12 looks in DYLD_LIBRARY_PATH on macOS
+#   brew install swig                 # ONLY needed for hw2 / LunarLander (Box2D)
+#
+# Set up the environment:
+#   uv sync                           # creates .venv with all hw1 dependencies
+#   uv sync --extra hw2               # also installs Box2D for LunarLander
+#
+# Install the local rob831 package (hw1 and hw2 share the name, install one at a time):
+#   uv pip install -e hw1/
+#   uv pip install -e hw2/            # replaces hw1's rob831 in the venv
+#
+# Run scripts (loads .env which sets DYLD_LIBRARY_PATH=/opt/homebrew/lib for GLFW):
+#   uv run --env-file .env python hw1/rob831/scripts/run_hw1.py ...
+#   uv run --env-file .env python hw2/rob831/scripts/run_hw2.py ...
+#
+# Or activate the venv and export manually:
+#   source .venv/bin/activate && export DYLD_LIBRARY_PATH=/opt/homebrew/lib
+#
+# On first `import mujoco_py`, free-mujoco-py will compile a Cython C extension
+# against the mujoco headers.  This is expected and takes ~30 s the first time.
+
+[project]
+name = "rob831-env"
+version = "0.1.0"
+description = "16-831 Statistical Techniques in Robotics – shared Python environment"
+requires-python = ">=3.10,<3.11"
+
+dependencies = [
+    # ── Core ─────────────────────────────────────────────────────────────────────
+    "numpy==1.25.2",
+
+    # ── MuJoCo ───────────────────────────────────────────────────────────────────
+    # Official DeepMind Python bindings (MuJoCo became free/open-source in 2022).
+    "mujoco==2.2.1",
+
+    # Drop-in shim for the legacy mujoco_py API, built on top of the new mujoco
+    # package.  Gym's v2 environments (Ant-v2, Humanoid-v2, Walker-v2, …) do
+    # `import mujoco_py` internally; free-mujoco-py satisfies that import.
+    #
+    # The package is a pure-Python wheel that compiles a Cython 0.29.x extension
+    # against the installed mujoco headers on first import (Cython is auto-pulled
+    # as a dep via free-mujoco-py's own requirements: Cython>=0.29.24,<0.30.0).
+    "free-mujoco-py",
+
+    # ── Gym ──────────────────────────────────────────────────────────────────────
+    # Base gym without Box2D; safe to install on all platforms without swig.
+    # For LunarLander (hw2) run `uv sync --extra hw2` after `brew install swig`.
+    "gym==0.25.1",
+
+    # ── PyTorch ──────────────────────────────────────────────────────────────────
+    # 1.12.1 is the first release with native Apple Silicon (MPS) support.
+    "torch==1.12.1",
+
+    # ── Logging ──────────────────────────────────────────────────────────────────
+    "tensorboard==2.10.0",
+    "tensorboardX==2.5.1",
+
+    # ── Visualisation ────────────────────────────────────────────────────────────
+    "matplotlib>=3.8,<3.10",
+    "IPython",
+
+    # ── Display utilities ────────────────────────────────────────────────────────
+    # pyvirtualdisplay wraps Xvfb (headless display on Linux).
+    # Installing it on macOS is harmless — it becomes a no-op when Xvfb is absent.
+    "pyvirtualdisplay",
+
+    # ── Notebook helper ──────────────────────────────────────────────────────────
+    "gym-notebook-wrapper",
+]
+
+[project.optional-dependencies]
+# hw2 / LunarLander requires Box2D, which must be compiled from source on arm64
+# macOS.  Install the system SWIG first: brew install swig
+hw2 = ["gym[box2d]==0.25.1"]
+
+[tool.uv]
+# This file is an environment descriptor, not an installable package.
+package = false
