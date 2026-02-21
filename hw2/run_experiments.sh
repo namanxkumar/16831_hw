@@ -76,10 +76,10 @@ echo "  Logs: logs/<exp_name>.log"
 echo "════════════════════════════════════════════════════════"
 
 # ── Bonus: Parallelization timing (CartPole, serial vs 4-worker) ──────────────
-run_exp cartpole_serial \
-    --env_name CartPole-v1 --ep_len 500 \
-    --discount 0.99 -n 50 -l 2 -s 64 -b 5000 -lr 0.01 \
-    --reward_to_go --nn_baseline --n_workers 1
+# run_exp cartpole_serial \
+#     --env_name CartPole-v1 --ep_len 500 \
+#     --discount 0.99 -n 50 -l 2 -s 64 -b 5000 -lr 0.01 \
+#     --reward_to_go --nn_baseline --n_workers 1
 
 run_exp cartpole_parallel_4 \
     --env_name CartPole-v1 --ep_len 500 \
@@ -87,17 +87,17 @@ run_exp cartpole_parallel_4 \
     --reward_to_go --nn_baseline --n_workers 4
 
 # ── Bonus: Multi-gradient-steps (CartPole, 1 step vs 10 steps) ───────────────
-run_exp cartpole_1step \
-    --env_name CartPole-v1 --ep_len 500 \
-    --discount 0.99 -n 100 -l 2 -s 64 -b 5000 -lr 0.01 \
-    --reward_to_go --nn_baseline \
-    --num_agent_train_steps_per_iter 1
+# run_exp cartpole_1step \
+#     --env_name CartPole-v1 --ep_len 500 \
+#     --discount 0.99 -n 100 -l 2 -s 64 -b 5000 -lr 0.01 \
+#     --reward_to_go --nn_baseline \
+#     --num_agent_train_steps_per_iter 1
 
-run_exp cartpole_10steps \
-    --env_name CartPole-v1 --ep_len 500 \
-    --discount 0.99 -n 100 -l 2 -s 64 -b 5000 -lr 0.01 \
-    --reward_to_go --nn_baseline \
-    --num_agent_train_steps_per_iter 10
+# run_exp cartpole_10steps \
+#     --env_name CartPole-v1 --ep_len 500 \
+#     --discount 0.99 -n 100 -l 2 -s 64 -b 5000 -lr 0.01 \
+#     --reward_to_go --nn_baseline \
+#     --num_agent_train_steps_per_iter 10
 
 # # Q7.1: LunarLander
 # run_exp q3_b10000_r0.005 \
@@ -255,6 +255,7 @@ if [[ ${#timing_dirs[@]} -gt 0 ]]; then
     echo "  → timing plot: plots/bonus_parallelization_time.png"
     "$PYTHON" plot_run.py "${timing_dirs[@]}" \
         --tag TimeSinceStart \
+        --ylabel "Wall-Clock Time (s)" \
         --out "plots/bonus_parallelization_time.png" \
         --title "CartPole: Wall-Clock Time per Iteration (serial vs 4-worker)"
 fi

@@ -109,7 +109,7 @@ def sample_n_trajectories(env, policy, ntraj, max_path_length, render=False, ren
 
 def _worker_collect(args):
     """Worker function for parallel trajectory collection."""
-    env_name, policy_state, max_path_length, discrete, ob_dim, ac_dim, n_layers, size = args
+    env_name, policy_state, max_path_length, discrete, ob_dim, ac_dim, n_layers, size, nn_baseline = args
     import gym
     from rob831.policies.MLP_policy import MLPPolicyPG
 
@@ -118,7 +118,7 @@ def _worker_collect(args):
 
     env = gym.make(env_name)
     # Create a fresh policy and load weights
-    policy = MLPPolicyPG(ac_dim, ob_dim, n_layers, size, discrete=discrete)
+    policy = MLPPolicyPG(ac_dim, ob_dim, n_layers, size, discrete=discrete, nn_baseline=nn_baseline)
     policy.load_state_dict(policy_state)
     policy.eval()
 
@@ -144,7 +144,7 @@ def sample_trajectories_parallel(env, policy, min_timesteps_per_batch, max_path_
     policy_state = {k: v.cpu() for k, v in policy.state_dict().items()}
     worker_args = (env_name, policy_state, max_path_length,
                    policy.discrete, policy.ob_dim, policy.ac_dim,
-                   policy.n_layers, policy.size)
+                   policy.n_layers, policy.size, policy.nn_baseline)
 
     pool = _get_pool(n_workers)
 

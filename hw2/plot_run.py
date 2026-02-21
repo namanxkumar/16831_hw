@@ -48,7 +48,7 @@ def exp_label(logdir):
 
 
 def plot_runs(logdirs, tag, out_path, title=None, xlabel="Iteration",
-              ylabel="Eval Average Return"):
+              ylabel=None):
     fig, ax = plt.subplots(figsize=(8, 5))
 
     for logdir in logdirs:
@@ -60,7 +60,7 @@ def plot_runs(logdirs, tag, out_path, title=None, xlabel="Iteration",
             print(f"  [warn] could not read {logdir}: {exc}")
 
     ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
+    ax.set_ylabel(ylabel if ylabel is not None else tag)
     ax.set_title(title or tag)
     ax.legend(fontsize=8, loc="best")
     ax.grid(True, alpha=0.3)
@@ -76,7 +76,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("logdirs", nargs="+",
                         help="One or more TensorBoard log directories")
-    parser.add_argument("--tag",   default="Eval_AverageReturn")
+    parser.add_argument("--tag",    default="Eval_AverageReturn")
+    parser.add_argument("--ylabel", default=None)
     parser.add_argument("--out",   default=None,
                         help="Output PNG path (default: <logdir>/learning_curve.png "
                              "for single-run mode)")
@@ -93,7 +94,8 @@ def main():
         out_path = "combined_learning_curve.png"
 
     os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
-    plot_runs(logdirs, tag=args.tag, out_path=out_path, title=args.title)
+    plot_runs(logdirs, tag=args.tag, out_path=out_path, title=args.title,
+              ylabel=args.ylabel)
 
 
 if __name__ == "__main__":
