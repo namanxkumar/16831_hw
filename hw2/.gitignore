@@ -1,0 +1,7 @@
+logs/*
+data/*
+plots/*
+__pycache__/*
+*.pyc
+*.pkl
+*.egg-info
