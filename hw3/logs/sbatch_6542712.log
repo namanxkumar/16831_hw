@@ -1,0 +1,20 @@
+════════════════════════════════════════════════════════
+  Launching all HW3 experiments in parallel
+  Logs: logs/<exp_name>.log
+════════════════════════════════════════════════════════
+  Launching DQN: q1_dqn_1
+  Launching DQN: q1_doubledqn_1
+  Launching AC: q2_10_10
+  Launching AC: q3_10_10
+  All launched. Waiting for completion...
+  All experiments finished.
+  Generating plots...
+  [warn] no dirs found for prefix 'q1_dqn' in /home/namankum/16831_hw/hw3/data
+  [warn] no dirs found for prefix 'q1_doubledqn' in /home/namankum/16831_hw/hw3/data
+/home/namankum/16831_hw/hw3/plot_run.py:112: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(fontsize=8, loc="best")
+Saved plot -> plots/q1_dqn_vs_ddqn.png
+Saved plot -> plots/q2_cartpole.png
+════════════════════════════════════════════════════════
+  All done. Plots saved to plots/
+════════════════════════════════════════════════════════

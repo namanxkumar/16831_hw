@@ -1,0 +1,2755 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+
+
+
+LOGGING TO:  /home/namankum/16831_hw/hw3/rob831/scripts/../../data/q3_10_10_InvertedPendulum-v4_11-03-2026_19-28-26 
+
+
+
+########################
+logging outputs to  /home/namankum/16831_hw/hw3/rob831/scripts/../../data/q3_10_10_InvertedPendulum-v4_11-03-2026_19-28-26
+########################
+Using GPU id 0
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/gym/core.py:317: DeprecationWarning: [33mWARN: Initializing wrapper in old step API which returns one bool instead of two. It is recommended to set `new_step_api=True` to use new step API. This will be the default behaviour in future.[0m
+  deprecation(
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/gym/wrappers/step_api_compatibility.py:39: DeprecationWarning: [33mWARN: Initializing environment in old step API which returns one bool instead of two. It is recommended to set `new_step_api=True` to use new step API. This will be the default behaviour in future.[0m
+  deprecation(
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/gym/core.py:256: DeprecationWarning: [33mWARN: Function `env.seed(seed)` is marked as deprecated and will be removed in the future. Please use `env.reset(seed=seed)` instead.[0m
+  deprecation(
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+
+
+********** Iteration 0 ************
+/home/namankum/16831_hw/hw2/.venv/lib64/python3.9/site-packages/gym/utils/passive_env_checker.py:241: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  if not isinstance(terminated, (bool, np.bool8)):
+sampled 5/5000 timestepssampled 9/5000 timestepssampled 13/5000 timestepssampled 20/5000 timestepssampled 28/5000 timestepssampled 32/5000 timestepssampled 39/5000 timestepssampled 50/5000 timestepssampled 60/5000 timestepssampled 66/5000 timestepssampled 74/5000 timestepssampled 95/5000 timestepssampled 104/5000 timestepssampled 111/5000 timestepssampled 115/5000 timestepssampled 119/5000 timestepssampled 125/5000 timestepssampled 135/5000 timestepssampled 151/5000 timestepssampled 160/5000 timestepssampled 164/5000 timestepssampled 171/5000 timestepssampled 185/5000 timestepssampled 191/5000 timestepssampled 205/5000 timestepssampled 221/5000 timestepssampled 230/5000 timestepssampled 238/5000 timestepssampled 245/5000 timestepssampled 251/5000 timestepssampled 263/5000 timestepssampled 271/5000 timestepssampled 276/5000 timestepssampled 280/5000 timestepssampled 286/5000 timestepssampled 292/5000 timestepssampled 303/5000 timestepssampled 308/5000 timestepssampled 318/5000 timestepssampled 330/5000 timestepssampled 339/5000 timestepssampled 355/5000 timestepssampled 362/5000 timestepssampled 366/5000 timestepssampled 371/5000 timestepssampled 385/5000 timestepssampled 394/5000 timestepssampled 398/5000 timestepssampled 406/5000 timestepssampled 426/5000 timestepssampled 437/5000 timestepssampled 441/5000 timestepssampled 450/5000 timestepssampled 472/5000 timestepssampled 481/5000 timestepssampled 486/5000 timestepssampled 507/5000 timestepssampled 517/5000 timestepssampled 523/5000 timestepssampled 533/5000 timestepssampled 540/5000 timestepssampled 553/5000 timestepssampled 569/5000 timestepssampled 575/5000 timestepssampled 587/5000 timestepssampled 594/5000 timestepssampled 601/5000 timestepssampled 617/5000 timestepssampled 626/5000 timestepssampled 633/5000 timestepssampled 645/5000 timestepssampled 651/5000 timestepssampled 669/5000 timestepssampled 679/5000 timestepssampled 686/5000 timestepssampled 690/5000 timestepssampled 704/5000 timestepssampled 713/5000 timestepssampled 723/5000 timestepssampled 739/5000 timestepssampled 746/5000 timestepssampled 751/5000 timestepssampled 778/5000 timestepssampled 785/5000 timestepssampled 791/5000 timestepssampled 813/5000 timestepssampled 821/5000 timestepssampled 842/5000 timestepssampled 846/5000 timestepssampled 851/5000 timestepssampled 857/5000 timestepssampled 881/5000 timestepssampled 888/5000 timestepssampled 892/5000 timestepssampled 908/5000 timestepssampled 912/5000 timestepssampled 917/5000 timestepssampled 921/5000 timestepssampled 926/5000 timestepssampled 936/5000 timestepssampled 965/5000 timestepssampled 969/5000 timestepssampled 973/5000 timestepssampled 979/5000 timestepssampled 988/5000 timestepssampled 1012/5000 timestepssampled 1020/5000 timestepssampled 1025/5000 timestepssampled 1037/5000 timestepssampled 1042/5000 timestepssampled 1055/5000 timestepssampled 1063/5000 timestepssampled 1090/5000 timestepssampled 1101/5000 timestepssampled 1107/5000 timestepssampled 1115/5000 timestepssampled 1120/5000 timestepssampled 1125/5000 timestepssampled 1131/5000 timestepssampled 1140/5000 timestepssampled 1148/5000 timestepssampled 1157/5000 timestepssampled 1166/5000 timestepssampled 1173/5000 timestepssampled 1199/5000 timestepssampled 1203/5000 timestepssampled 1213/5000 timestepssampled 1219/5000 timestepssampled 1224/5000 timestepssampled 1230/5000 timestepssampled 1243/5000 timestepssampled 1249/5000 timestepssampled 1256/5000 timestepssampled 1260/5000 timestepssampled 1275/5000 timestepssampled 1278/5000 timestepssampled 1290/5000 timestepssampled 1302/5000 timestepssampled 1314/5000 timestepssampled 1318/5000 timestepssampled 1325/5000 timestepssampled 1332/5000 timestepssampled 1340/5000 timestepssampled 1345/5000 timestepssampled 1353/5000 timestepssampled 1359/5000 timestepssampled 1365/5000 timestepssampled 1371/5000 timestepssampled 1383/5000 timestepssampled 1393/5000 timestepssampled 1412/5000 timestepssampled 1424/5000 timestepssampled 1434/5000 timestepssampled 1439/5000 timestepssampled 1449/5000 timestepssampled 1456/5000 timestepssampled 1459/5000 timestepssampled 1465/5000 timestepssampled 1471/5000 timestepssampled 1488/5000 timestepssampled 1494/5000 timestepssampled 1498/5000 timestepssampled 1506/5000 timestepssampled 1516/5000 timestepssampled 1522/5000 timestepssampled 1534/5000 timestepssampled 1543/5000 timestepssampled 1549/5000 timestepssampled 1579/5000 timestepssampled 1598/5000 timestepssampled 1604/5000 timestepssampled 1610/5000 timestepssampled 1622/5000 timestepssampled 1629/5000 timestepssampled 1640/5000 timestepssampled 1657/5000 timestepssampled 1670/5000 timestepssampled 1678/5000 timestepssampled 1682/5000 timestepssampled 1686/5000 timestepssampled 1691/5000 timestepssampled 1698/5000 timestepssampled 1703/5000 timestepssampled 1708/5000 timestepssampled 1714/5000 timestepssampled 1720/5000 timestepssampled 1726/5000 timestepssampled 1734/5000 timestepssampled 1742/5000 timestepssampled 1755/5000 timestepssampled 1761/5000 timestepssampled 1767/5000 timestepssampled 1776/5000 timestepssampled 1791/5000 timestepssampled 1807/5000 timestepssampled 1813/5000 timestepssampled 1824/5000 timestepssampled 1837/5000 timestepssampled 1846/5000 timestepssampled 1873/5000 timestepssampled 1877/5000 timestepssampled 1893/5000 timestepssampled 1898/5000 timestepssampled 1911/5000 timestepssampled 1925/5000 timestepssampled 1931/5000 timestepssampled 1944/5000 timestepssampled 1958/5000 timestepssampled 1964/5000 timestepssampled 1969/5000 timestepssampled 1988/5000 timestepssampled 1995/5000 timestepssampled 2002/5000 timestepssampled 2011/5000 timestepssampled 2018/5000 timestepssampled 2045/5000 timestepssampled 2053/5000 timestepssampled 2068/5000 timestepssampled 2080/5000 timestepssampled 2084/5000 timestepssampled 2095/5000 timestepssampled 2103/5000 timestepssampled 2110/5000 timestepssampled 2116/5000 timestepssampled 2123/5000 timestepssampled 2131/5000 timestepssampled 2139/5000 timestepssampled 2146/5000 timestepssampled 2154/5000 timestepssampled 2159/5000 timestepssampled 2175/5000 timestepssampled 2183/5000 timestepssampled 2187/5000 timestepssampled 2200/5000 timestepssampled 2204/5000 timestepssampled 2211/5000 timestepssampled 2218/5000 timestepssampled 2222/5000 timestepssampled 2237/5000 timestepssampled 2242/5000 timestepssampled 2249/5000 timestepssampled 2262/5000 timestepssampled 2269/5000 timestepssampled 2284/5000 timestepssampled 2287/5000 timestepssampled 2300/5000 timestepssampled 2306/5000 timestepssampled 2310/5000 timestepssampled 2346/5000 timestepssampled 2351/5000 timestepssampled 2369/5000 timestepssampled 2376/5000 timestepssampled 2381/5000 timestepssampled 2402/5000 timestepssampled 2407/5000 timestepssampled 2414/5000 timestepssampled 2420/5000 timestepssampled 2432/5000 timestepssampled 2442/5000 timestepssampled 2446/5000 timestepssampled 2451/5000 timestepssampled 2458/5000 timestepssampled 2463/5000 timestepssampled 2468/5000 timestepssampled 2474/5000 timestepssampled 2485/5000 timestepssampled 2490/5000 timestepssampled 2509/5000 timestepssampled 2516/5000 timestepssampled 2520/5000 timestepssampled 2526/5000 timestepssampled 2534/5000 timestepssampled 2545/5000 timestepssampled 2549/5000 timestepssampled 2553/5000 timestepssampled 2566/5000 timestepssampled 2571/5000 timestepssampled 2577/5000 timestepssampled 2587/5000 timestepssampled 2592/5000 timestepssampled 2602/5000 timestepssampled 2605/5000 timestepssampled 2612/5000 timestepssampled 2617/5000 timestepssampled 2625/5000 timestepssampled 2631/5000 timestepssampled 2638/5000 timestepssampled 2643/5000 timestepssampled 2649/5000 timestepssampled 2664/5000 timestepssampled 2669/5000 timestepssampled 2680/5000 timestepssampled 2697/5000 timestepssampled 2701/5000 timestepssampled 2718/5000 timestepssampled 2723/5000 timestepssampled 2734/5000 timestepssampled 2741/5000 timestepssampled 2746/5000 timestepssampled 2753/5000 timestepssampled 2761/5000 timestepssampled 2766/5000 timestepssampled 2772/5000 timestepssampled 2783/5000 timestepssampled 2786/5000 timestepssampled 2807/5000 timestepssampled 2814/5000 timestepssampled 2823/5000 timestepssampled 2828/5000 timestepssampled 2846/5000 timestepssampled 2864/5000 timestepssampled 2878/5000 timestepssampled 2883/5000 timestepssampled 2890/5000 timestepssampled 2898/5000 timestepssampled 2912/5000 timestepssampled 2938/5000 timestepssampled 2948/5000 timestepssampled 2954/5000 timestepssampled 2962/5000 timestepssampled 2972/5000 timestepssampled 2988/5000 timestepssampled 3005/5000 timestepssampled 3014/5000 timestepssampled 3024/5000 timestepssampled 3030/5000 timestepssampled 3036/5000 timestepssampled 3052/5000 timestepssampled 3055/5000 timestepssampled 3062/5000 timestepssampled 3066/5000 timestepssampled 3070/5000 timestepssampled 3078/5000 timestepssampled 3095/5000 timestepssampled 3100/5000 timestepssampled 3106/5000 timestepssampled 3113/5000 timestepssampled 3117/5000 timestepssampled 3132/5000 timestepssampled 3142/5000 timestepssampled 3155/5000 timestepssampled 3169/5000 timestepssampled 3178/5000 timestepssampled 3187/5000 timestepssampled 3195/5000 timestepssampled 3206/5000 timestepssampled 3210/5000 timestepssampled 3223/5000 timestepssampled 3230/5000 timestepssampled 3236/5000 timestepssampled 3243/5000 timestepssampled 3250/5000 timestepssampled 3263/5000 timestepssampled 3268/5000 timestepssampled 3286/5000 timestepssampled 3300/5000 timestepssampled 3306/5000 timestepssampled 3313/5000 timestepssampled 3325/5000 timestepssampled 3335/5000 timestepssampled 3342/5000 timestepssampled 3352/5000 timestepssampled 3359/5000 timestepssampled 3370/5000 timestepssampled 3378/5000 timestepssampled 3382/5000 timestepssampled 3401/5000 timestepssampled 3412/5000 timestepssampled 3417/5000 timestepssampled 3426/5000 timestepssampled 3434/5000 timestepssampled 3448/5000 timestepssampled 3456/5000 timestepssampled 3464/5000 timestepssampled 3468/5000 timestepssampled 3474/5000 timestepssampled 3482/5000 timestepssampled 3486/5000 timestepssampled 3499/5000 timestepssampled 3510/5000 timestepssampled 3517/5000 timestepssampled 3524/5000 timestepssampled 3531/5000 timestepssampled 3539/5000 timestepssampled 3545/5000 timestepssampled 3556/5000 timestepssampled 3571/5000 timestepssampled 3575/5000 timestepssampled 3581/5000 timestepssampled 3590/5000 timestepssampled 3598/5000 timestepssampled 3603/5000 timestepssampled 3608/5000 timestepssampled 3613/5000 timestepssampled 3619/5000 timestepssampled 3626/5000 timestepssampled 3632/5000 timestepssampled 3640/5000 timestepssampled 3652/5000 timestepssampled 3660/5000 timestepssampled 3670/5000 timestepssampled 3675/5000 timestepssampled 3681/5000 timestepssampled 3685/5000 timestepssampled 3691/5000 timestepssampled 3704/5000 timestepssampled 3718/5000 timestepssampled 3726/5000 timestepssampled 3734/5000 timestepssampled 3743/5000 timestepssampled 3759/5000 timestepssampled 3765/5000 timestepssampled 3774/5000 timestepssampled 3781/5000 timestepssampled 3788/5000 timestepssampled 3792/5000 timestepssampled 3801/5000 timestepssampled 3822/5000 timestepssampled 3837/5000 timestepssampled 3840/5000 timestepssampled 3848/5000 timestepssampled 3854/5000 timestepssampled 3863/5000 timestepssampled 3874/5000 timestepssampled 3893/5000 timestepssampled 3901/5000 timestepssampled 3905/5000 timestepssampled 3914/5000 timestepssampled 3921/5000 timestepssampled 3926/5000 timestepssampled 3933/5000 timestepssampled 3938/5000 timestepssampled 3959/5000 timestepssampled 3970/5000 timestepssampled 3992/5000 timestepssampled 4000/5000 timestepssampled 4007/5000 timestepssampled 4011/5000 timestepssampled 4027/5000 timestepssampled 4050/5000 timestepssampled 4056/5000 timestepssampled 4060/5000 timestepssampled 4065/5000 timestepssampled 4069/5000 timestepssampled 4074/5000 timestepssampled 4090/5000 timestepssampled 4103/5000 timestepssampled 4110/5000 timestepssampled 4117/5000 timestepssampled 4122/5000 timestepssampled 4128/5000 timestepssampled 4137/5000 timestepssampled 4142/5000 timestepssampled 4150/5000 timestepssampled 4174/5000 timestepssampled 4185/5000 timestepssampled 4191/5000 timestepssampled 4212/5000 timestepssampled 4219/5000 timestepssampled 4228/5000 timestepssampled 4234/5000 timestepssampled 4240/5000 timestepssampled 4258/5000 timestepssampled 4262/5000 timestepssampled 4268/5000 timestepssampled 4274/5000 timestepssampled 4283/5000 timestepssampled 4307/5000 timestepssampled 4318/5000 timestepssampled 4327/5000 timestepssampled 4331/5000 timestepssampled 4338/5000 timestepssampled 4344/5000 timestepssampled 4362/5000 timestepssampled 4377/5000 timestepssampled 4388/5000 timestepssampled 4394/5000 timestepssampled 4398/5000 timestepssampled 4403/5000 timestepssampled 4412/5000 timestepssampled 4422/5000 timestepssampled 4437/5000 timestepssampled 4446/5000 timestepssampled 4456/5000 timestepssampled 4461/5000 timestepssampled 4465/5000 timestepssampled 4469/5000 timestepssampled 4474/5000 timestepssampled 4482/5000 timestepssampled 4488/5000 timestepssampled 4495/5000 timestepssampled 4507/5000 timestepssampled 4514/5000 timestepssampled 4525/5000 timestepssampled 4533/5000 timestepssampled 4543/5000 timestepssampled 4548/5000 timestepssampled 4559/5000 timestepssampled 4566/5000 timestepssampled 4578/5000 timestepssampled 4586/5000 timestepssampled 4592/5000 timestepssampled 4597/5000 timestepssampled 4603/5000 timestepssampled 4608/5000 timestepssampled 4616/5000 timestepssampled 4629/5000 timestepssampled 4636/5000 timestepssampled 4642/5000 timestepssampled 4659/5000 timestepssampled 4668/5000 timestepssampled 4673/5000 timestepssampled 4681/5000 timestepssampled 4685/5000 timestepssampled 4705/5000 timestepssampled 4715/5000 timestepssampled 4724/5000 timestepssampled 4737/5000 timestepssampled 4741/5000 timestepssampled 4758/5000 timestepssampled 4765/5000 timestepssampled 4779/5000 timestepssampled 4783/5000 timestepssampled 4794/5000 timestepssampled 4806/5000 timestepssampled 4814/5000 timestepssampled 4822/5000 timestepssampled 4827/5000 timestepssampled 4833/5000 timestepssampled 4846/5000 timestepssampled 4855/5000 timestepssampled 4868/5000 timestepssampled 4901/5000 timestepssampled 4909/5000 timestepssampled 4921/5000 timestepssampled 4929/5000 timestepssampled 4943/5000 timestepssampled 4951/5000 timestepssampled 4956/5000 timestepssampled 4959/5000 timestepssampled 4964/5000 timestepssampled 4981/5000 timestepssampled 4993/5000 timestepssampled 4999/5000 timestepssampled 5004/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 10/400 timestepssampled 17/400 timestepssampled 24/400 timestepssampled 34/400 timestepssampled 46/400 timestepssampled 66/400 timestepssampled 80/400 timestepssampled 92/400 timestepssampled 106/400 timestepssampled 132/400 timestepssampled 144/400 timestepssampled 153/400 timestepssampled 199/400 timestepssampled 235/400 timestepssampled 250/400 timestepssampled 259/400 timestepssampled 272/400 timestepssampled 283/400 timestepssampled 301/400 timestepssampled 315/400 timestepssampled 338/400 timestepssampled 349/400 timestepssampled 357/400 timestepssampled 365/400 timestepssampled 379/400 timestepssampled 403/400 timestepsEval_AverageReturn : 15.5
+Eval_StdReturn : 9.009610176086426
+Eval_MaxReturn : 46.0
+Eval_MinReturn : 7.0
+Eval_AverageEpLen : 15.5
+Train_AverageReturn : 9.18165111541748
+Train_StdReturn : 5.174215316772461
+Train_MaxReturn : 36.0
+Train_MinReturn : 3.0
+Train_AverageEpLen : 9.181651376146789
+Train_EnvstepsSoFar : 5004
+TimeSinceStart : 14.110811710357666
+Loss_Critic : 1.036648154258728
+Loss_Actor : -0.13651657104492188
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 1 ************
+sampled 5/5000 timestepssampled 26/5000 timestepssampled 46/5000 timestepssampled 93/5000 timestepssampled 104/5000 timestepssampled 136/5000 timestepssampled 150/5000 timestepssampled 155/5000 timestepssampled 174/5000 timestepssampled 201/5000 timestepssampled 239/5000 timestepssampled 242/5000 timestepssampled 261/5000 timestepssampled 288/5000 timestepssampled 303/5000 timestepssampled 322/5000 timestepssampled 328/5000 timestepssampled 352/5000 timestepssampled 368/5000 timestepssampled 373/5000 timestepssampled 388/5000 timestepssampled 397/5000 timestepssampled 408/5000 timestepssampled 450/5000 timestepssampled 456/5000 timestepssampled 460/5000 timestepssampled 476/5000 timestepssampled 524/5000 timestepssampled 542/5000 timestepssampled 550/5000 timestepssampled 567/5000 timestepssampled 581/5000 timestepssampled 591/5000 timestepssampled 604/5000 timestepssampled 611/5000 timestepssampled 616/5000 timestepssampled 628/5000 timestepssampled 658/5000 timestepssampled 668/5000 timestepssampled 713/5000 timestepssampled 718/5000 timestepssampled 734/5000 timestepssampled 744/5000 timestepssampled 755/5000 timestepssampled 760/5000 timestepssampled 775/5000 timestepssampled 786/5000 timestepssampled 815/5000 timestepssampled 821/5000 timestepssampled 828/5000 timestepssampled 835/5000 timestepssampled 864/5000 timestepssampled 885/5000 timestepssampled 916/5000 timestepssampled 924/5000 timestepssampled 973/5000 timestepssampled 983/5000 timestepssampled 994/5000 timestepssampled 1001/5000 timestepssampled 1007/5000 timestepssampled 1026/5000 timestepssampled 1050/5000 timestepssampled 1055/5000 timestepssampled 1062/5000 timestepssampled 1074/5000 timestepssampled 1111/5000 timestepssampled 1147/5000 timestepssampled 1156/5000 timestepssampled 1169/5000 timestepssampled 1217/5000 timestepssampled 1221/5000 timestepssampled 1230/5000 timestepssampled 1243/5000 timestepssampled 1279/5000 timestepssampled 1295/5000 timestepssampled 1337/5000 timestepssampled 1353/5000 timestepssampled 1382/5000 timestepssampled 1405/5000 timestepssampled 1435/5000 timestepssampled 1444/5000 timestepssampled 1454/5000 timestepssampled 1472/5000 timestepssampled 1481/5000 timestepssampled 1487/5000 timestepssampled 1508/5000 timestepssampled 1537/5000 timestepssampled 1572/5000 timestepssampled 1583/5000 timestepssampled 1602/5000 timestepssampled 1615/5000 timestepssampled 1639/5000 timestepssampled 1651/5000 timestepssampled 1662/5000 timestepssampled 1674/5000 timestepssampled 1680/5000 timestepssampled 1686/5000 timestepssampled 1698/5000 timestepssampled 1708/5000 timestepssampled 1731/5000 timestepssampled 1758/5000 timestepssampled 1794/5000 timestepssampled 1801/5000 timestepssampled 1828/5000 timestepssampled 1840/5000 timestepssampled 1853/5000 timestepssampled 1859/5000 timestepssampled 1872/5000 timestepssampled 1885/5000 timestepssampled 1912/5000 timestepssampled 1924/5000 timestepssampled 1940/5000 timestepssampled 1983/5000 timestepssampled 1995/5000 timestepssampled 2011/5000 timestepssampled 2031/5000 timestepssampled 2039/5000 timestepssampled 2045/5000 timestepssampled 2065/5000 timestepssampled 2071/5000 timestepssampled 2100/5000 timestepssampled 2125/5000 timestepssampled 2133/5000 timestepssampled 2147/5000 timestepssampled 2160/5000 timestepssampled 2184/5000 timestepssampled 2194/5000 timestepssampled 2218/5000 timestepssampled 2224/5000 timestepssampled 2257/5000 timestepssampled 2266/5000 timestepssampled 2281/5000 timestepssampled 2296/5000 timestepssampled 2320/5000 timestepssampled 2366/5000 timestepssampled 2393/5000 timestepssampled 2424/5000 timestepssampled 2441/5000 timestepssampled 2459/5000 timestepssampled 2465/5000 timestepssampled 2484/5000 timestepssampled 2492/5000 timestepssampled 2499/5000 timestepssampled 2534/5000 timestepssampled 2566/5000 timestepssampled 2584/5000 timestepssampled 2601/5000 timestepssampled 2607/5000 timestepssampled 2618/5000 timestepssampled 2635/5000 timestepssampled 2644/5000 timestepssampled 2660/5000 timestepssampled 2709/5000 timestepssampled 2722/5000 timestepssampled 2753/5000 timestepssampled 2763/5000 timestepssampled 2768/5000 timestepssampled 2776/5000 timestepssampled 2801/5000 timestepssampled 2811/5000 timestepssampled 2826/5000 timestepssampled 2840/5000 timestepssampled 2854/5000 timestepssampled 2881/5000 timestepssampled 2890/5000 timestepssampled 2911/5000 timestepssampled 2919/5000 timestepssampled 2972/5000 timestepssampled 2982/5000 timestepssampled 3001/5000 timestepssampled 3015/5000 timestepssampled 3041/5000 timestepssampled 3057/5000 timestepssampled 3072/5000 timestepssampled 3110/5000 timestepssampled 3136/5000 timestepssampled 3156/5000 timestepssampled 3170/5000 timestepssampled 3185/5000 timestepssampled 3244/5000 timestepssampled 3259/5000 timestepssampled 3272/5000 timestepssampled 3294/5000 timestepssampled 3300/5000 timestepssampled 3329/5000 timestepssampled 3351/5000 timestepssampled 3369/5000 timestepssampled 3397/5000 timestepssampled 3418/5000 timestepssampled 3422/5000 timestepssampled 3427/5000 timestepssampled 3435/5000 timestepssampled 3446/5000 timestepssampled 3506/5000 timestepssampled 3517/5000 timestepssampled 3544/5000 timestepssampled 3567/5000 timestepssampled 3592/5000 timestepssampled 3613/5000 timestepssampled 3625/5000 timestepssampled 3639/5000 timestepssampled 3653/5000 timestepssampled 3689/5000 timestepssampled 3710/5000 timestepssampled 3727/5000 timestepssampled 3740/5000 timestepssampled 3770/5000 timestepssampled 3802/5000 timestepssampled 3829/5000 timestepssampled 3856/5000 timestepssampled 3870/5000 timestepssampled 3882/5000 timestepssampled 3903/5000 timestepssampled 3909/5000 timestepssampled 3914/5000 timestepssampled 3923/5000 timestepssampled 3937/5000 timestepssampled 3953/5000 timestepssampled 3959/5000 timestepssampled 3967/5000 timestepssampled 3978/5000 timestepssampled 3994/5000 timestepssampled 3998/5000 timestepssampled 4026/5000 timestepssampled 4035/5000 timestepssampled 4046/5000 timestepssampled 4066/5000 timestepssampled 4080/5000 timestepssampled 4092/5000 timestepssampled 4103/5000 timestepssampled 4131/5000 timestepssampled 4175/5000 timestepssampled 4201/5000 timestepssampled 4222/5000 timestepssampled 4271/5000 timestepssampled 4289/5000 timestepssampled 4314/5000 timestepssampled 4331/5000 timestepssampled 4339/5000 timestepssampled 4355/5000 timestepssampled 4361/5000 timestepssampled 4372/5000 timestepssampled 4394/5000 timestepssampled 4439/5000 timestepssampled 4458/5000 timestepssampled 4466/5000 timestepssampled 4475/5000 timestepssampled 4483/5000 timestepssampled 4503/5000 timestepssampled 4522/5000 timestepssampled 4557/5000 timestepssampled 4571/5000 timestepssampled 4582/5000 timestepssampled 4597/5000 timestepssampled 4609/5000 timestepssampled 4631/5000 timestepssampled 4652/5000 timestepssampled 4669/5000 timestepssampled 4681/5000 timestepssampled 4685/5000 timestepssampled 4704/5000 timestepssampled 4732/5000 timestepssampled 4758/5000 timestepssampled 4766/5000 timestepssampled 4789/5000 timestepssampled 4796/5000 timestepssampled 4809/5000 timestepssampled 4816/5000 timestepssampled 4827/5000 timestepssampled 4840/5000 timestepssampled 4859/5000 timestepssampled 4904/5000 timestepssampled 4925/5000 timestepssampled 4934/5000 timestepssampled 4952/5000 timestepssampled 4965/5000 timestepssampled 4979/5000 timestepssampled 4990/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 37/400 timestepssampled 61/400 timestepssampled 78/400 timestepssampled 109/400 timestepssampled 149/400 timestepssampled 177/400 timestepssampled 209/400 timestepssampled 218/400 timestepssampled 254/400 timestepssampled 298/400 timestepssampled 307/400 timestepssampled 339/400 timestepssampled 385/400 timestepssampled 418/400 timestepsEval_AverageReturn : 29.85714340209961
+Eval_StdReturn : 11.166640281677246
+Eval_MaxReturn : 46.0
+Eval_MinReturn : 9.0
+Eval_AverageEpLen : 29.857142857142858
+Train_AverageReturn : 17.921146392822266
+Train_StdReturn : 11.203920364379883
+Train_MaxReturn : 60.0
+Train_MinReturn : 3.0
+Train_AverageEpLen : 17.921146953405017
+Train_EnvstepsSoFar : 10004
+TimeSinceStart : 30.70145320892334
+Loss_Critic : 1.3169360160827637
+Loss_Actor : -0.13877592980861664
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 2 ************
+sampled 39/5000 timestepssampled 73/5000 timestepssampled 85/5000 timestepssampled 102/5000 timestepssampled 121/5000 timestepssampled 132/5000 timestepssampled 173/5000 timestepssampled 190/5000 timestepssampled 236/5000 timestepssampled 302/5000 timestepssampled 318/5000 timestepssampled 340/5000 timestepssampled 356/5000 timestepssampled 397/5000 timestepssampled 422/5000 timestepssampled 439/5000 timestepssampled 474/5000 timestepssampled 547/5000 timestepssampled 561/5000 timestepssampled 607/5000 timestepssampled 635/5000 timestepssampled 649/5000 timestepssampled 662/5000 timestepssampled 694/5000 timestepssampled 738/5000 timestepssampled 757/5000 timestepssampled 788/5000 timestepssampled 828/5000 timestepssampled 874/5000 timestepssampled 912/5000 timestepssampled 932/5000 timestepssampled 942/5000 timestepssampled 1004/5000 timestepssampled 1023/5000 timestepssampled 1043/5000 timestepssampled 1056/5000 timestepssampled 1111/5000 timestepssampled 1172/5000 timestepssampled 1194/5000 timestepssampled 1230/5000 timestepssampled 1261/5000 timestepssampled 1279/5000 timestepssampled 1360/5000 timestepssampled 1395/5000 timestepssampled 1414/5000 timestepssampled 1442/5000 timestepssampled 1456/5000 timestepssampled 1504/5000 timestepssampled 1516/5000 timestepssampled 1570/5000 timestepssampled 1607/5000 timestepssampled 1626/5000 timestepssampled 1686/5000 timestepssampled 1730/5000 timestepssampled 1752/5000 timestepssampled 1763/5000 timestepssampled 1771/5000 timestepssampled 1870/5000 timestepssampled 1900/5000 timestepssampled 1911/5000 timestepssampled 1950/5000 timestepssampled 1967/5000 timestepssampled 2010/5000 timestepssampled 2023/5000 timestepssampled 2044/5000 timestepssampled 2058/5000 timestepssampled 2079/5000 timestepssampled 2109/5000 timestepssampled 2139/5000 timestepssampled 2157/5000 timestepssampled 2194/5000 timestepssampled 2205/5000 timestepssampled 2233/5000 timestepssampled 2251/5000 timestepssampled 2266/5000 timestepssampled 2334/5000 timestepssampled 2345/5000 timestepssampled 2370/5000 timestepssampled 2387/5000 timestepssampled 2440/5000 timestepssampled 2494/5000 timestepssampled 2506/5000 timestepssampled 2517/5000 timestepssampled 2546/5000 timestepssampled 2574/5000 timestepssampled 2593/5000 timestepssampled 2630/5000 timestepssampled 2664/5000 timestepssampled 2699/5000 timestepssampled 2731/5000 timestepssampled 2767/5000 timestepssampled 2810/5000 timestepssampled 2832/5000 timestepssampled 2843/5000 timestepssampled 2858/5000 timestepssampled 2878/5000 timestepssampled 2898/5000 timestepssampled 2931/5000 timestepssampled 2967/5000 timestepssampled 2990/5000 timestepssampled 2999/5000 timestepssampled 3012/5000 timestepssampled 3035/5000 timestepssampled 3100/5000 timestepssampled 3146/5000 timestepssampled 3162/5000 timestepssampled 3182/5000 timestepssampled 3215/5000 timestepssampled 3239/5000 timestepssampled 3267/5000 timestepssampled 3311/5000 timestepssampled 3355/5000 timestepssampled 3382/5000 timestepssampled 3395/5000 timestepssampled 3423/5000 timestepssampled 3450/5000 timestepssampled 3479/5000 timestepssampled 3499/5000 timestepssampled 3522/5000 timestepssampled 3570/5000 timestepssampled 3598/5000 timestepssampled 3620/5000 timestepssampled 3641/5000 timestepssampled 3687/5000 timestepssampled 3708/5000 timestepssampled 3737/5000 timestepssampled 3750/5000 timestepssampled 3767/5000 timestepssampled 3795/5000 timestepssampled 3807/5000 timestepssampled 3828/5000 timestepssampled 3868/5000 timestepssampled 3930/5000 timestepssampled 3955/5000 timestepssampled 3977/5000 timestepssampled 4000/5000 timestepssampled 4068/5000 timestepssampled 4078/5000 timestepssampled 4133/5000 timestepssampled 4160/5000 timestepssampled 4189/5000 timestepssampled 4217/5000 timestepssampled 4226/5000 timestepssampled 4240/5000 timestepssampled 4251/5000 timestepssampled 4283/5000 timestepssampled 4297/5000 timestepssampled 4313/5000 timestepssampled 4335/5000 timestepssampled 4374/5000 timestepssampled 4400/5000 timestepssampled 4466/5000 timestepssampled 4491/5000 timestepssampled 4519/5000 timestepssampled 4535/5000 timestepssampled 4597/5000 timestepssampled 4643/5000 timestepssampled 4664/5000 timestepssampled 4692/5000 timestepssampled 4745/5000 timestepssampled 4800/5000 timestepssampled 4830/5000 timestepssampled 4913/5000 timestepssampled 4937/5000 timestepssampled 4953/5000 timestepssampled 4976/5000 timestepssampled 4995/5000 timestepssampled 5043/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 56/400 timestepssampled 76/400 timestepssampled 90/400 timestepssampled 160/400 timestepssampled 203/400 timestepssampled 213/400 timestepssampled 268/400 timestepssampled 294/400 timestepssampled 318/400 timestepssampled 346/400 timestepssampled 372/400 timestepssampled 402/400 timestepsEval_AverageReturn : 33.5
+Eval_StdReturn : 17.68002700805664
+Eval_MaxReturn : 70.0
+Eval_MinReturn : 10.0
+Eval_AverageEpLen : 33.5
+Train_AverageReturn : 30.01785659790039
+Train_StdReturn : 16.920146942138672
+Train_MaxReturn : 99.0
+Train_MinReturn : 8.0
+Train_AverageEpLen : 30.017857142857142
+Train_EnvstepsSoFar : 15047
+TimeSinceStart : 46.94852566719055
+Loss_Critic : 1.165917992591858
+Loss_Actor : -0.11696632951498032
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 3 ************
+sampled 21/5000 timestepssampled 63/5000 timestepssampled 87/5000 timestepssampled 126/5000 timestepssampled 146/5000 timestepssampled 180/5000 timestepssampled 220/5000 timestepssampled 266/5000 timestepssampled 308/5000 timestepssampled 399/5000 timestepssampled 435/5000 timestepssampled 456/5000 timestepssampled 467/5000 timestepssampled 569/5000 timestepssampled 602/5000 timestepssampled 639/5000 timestepssampled 650/5000 timestepssampled 672/5000 timestepssampled 702/5000 timestepssampled 745/5000 timestepssampled 794/5000 timestepssampled 807/5000 timestepssampled 848/5000 timestepssampled 869/5000 timestepssampled 896/5000 timestepssampled 931/5000 timestepssampled 960/5000 timestepssampled 1002/5000 timestepssampled 1029/5000 timestepssampled 1068/5000 timestepssampled 1124/5000 timestepssampled 1161/5000 timestepssampled 1209/5000 timestepssampled 1232/5000 timestepssampled 1294/5000 timestepssampled 1317/5000 timestepssampled 1355/5000 timestepssampled 1388/5000 timestepssampled 1401/5000 timestepssampled 1416/5000 timestepssampled 1452/5000 timestepssampled 1486/5000 timestepssampled 1541/5000 timestepssampled 1567/5000 timestepssampled 1602/5000 timestepssampled 1662/5000 timestepssampled 1687/5000 timestepssampled 1713/5000 timestepssampled 1790/5000 timestepssampled 1828/5000 timestepssampled 1861/5000 timestepssampled 2000/5000 timestepssampled 2044/5000 timestepssampled 2059/5000 timestepssampled 2096/5000 timestepssampled 2118/5000 timestepssampled 2127/5000 timestepssampled 2153/5000 timestepssampled 2184/5000 timestepssampled 2229/5000 timestepssampled 2255/5000 timestepssampled 2284/5000 timestepssampled 2334/5000 timestepssampled 2361/5000 timestepssampled 2370/5000 timestepssampled 2385/5000 timestepssampled 2434/5000 timestepssampled 2485/5000 timestepssampled 2507/5000 timestepssampled 2522/5000 timestepssampled 2609/5000 timestepssampled 2627/5000 timestepssampled 2646/5000 timestepssampled 2666/5000 timestepssampled 2691/5000 timestepssampled 2722/5000 timestepssampled 2744/5000 timestepssampled 2784/5000 timestepssampled 2819/5000 timestepssampled 2846/5000 timestepssampled 2867/5000 timestepssampled 2882/5000 timestepssampled 2921/5000 timestepssampled 2946/5000 timestepssampled 2971/5000 timestepssampled 3035/5000 timestepssampled 3102/5000 timestepssampled 3121/5000 timestepssampled 3146/5000 timestepssampled 3162/5000 timestepssampled 3195/5000 timestepssampled 3217/5000 timestepssampled 3236/5000 timestepssampled 3243/5000 timestepssampled 3272/5000 timestepssampled 3304/5000 timestepssampled 3316/5000 timestepssampled 3349/5000 timestepssampled 3395/5000 timestepssampled 3424/5000 timestepssampled 3472/5000 timestepssampled 3536/5000 timestepssampled 3548/5000 timestepssampled 3569/5000 timestepssampled 3625/5000 timestepssampled 3640/5000 timestepssampled 3684/5000 timestepssampled 3716/5000 timestepssampled 3734/5000 timestepssampled 3756/5000 timestepssampled 3817/5000 timestepssampled 3851/5000 timestepssampled 3879/5000 timestepssampled 3920/5000 timestepssampled 3948/5000 timestepssampled 3965/5000 timestepssampled 3986/5000 timestepssampled 4019/5000 timestepssampled 4053/5000 timestepssampled 4086/5000 timestepssampled 4166/5000 timestepssampled 4254/5000 timestepssampled 4289/5000 timestepssampled 4336/5000 timestepssampled 4377/5000 timestepssampled 4410/5000 timestepssampled 4462/5000 timestepssampled 4487/5000 timestepssampled 4548/5000 timestepssampled 4581/5000 timestepssampled 4601/5000 timestepssampled 4639/5000 timestepssampled 4666/5000 timestepssampled 4724/5000 timestepssampled 4750/5000 timestepssampled 4802/5000 timestepssampled 4830/5000 timestepssampled 4851/5000 timestepssampled 4879/5000 timestepssampled 4897/5000 timestepssampled 4959/5000 timestepssampled 5015/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 29/400 timestepssampled 66/400 timestepssampled 104/400 timestepssampled 125/400 timestepssampled 169/400 timestepssampled 190/400 timestepssampled 319/400 timestepssampled 411/400 timestepsEval_AverageReturn : 51.375
+Eval_StdReturn : 36.1626091003418
+Eval_MaxReturn : 129.0
+Eval_MinReturn : 21.0
+Eval_AverageEpLen : 51.375
+Train_AverageReturn : 35.31690216064453
+Train_StdReturn : 19.55504035949707
+Train_MaxReturn : 139.0
+Train_MinReturn : 7.0
+Train_AverageEpLen : 35.316901408450704
+Train_EnvstepsSoFar : 20062
+TimeSinceStart : 63.38211488723755
+Loss_Critic : 0.9080937504768372
+Loss_Actor : -0.11692885309457779
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 4 ************
+sampled 21/5000 timestepssampled 62/5000 timestepssampled 88/5000 timestepssampled 191/5000 timestepssampled 246/5000 timestepssampled 280/5000 timestepssampled 324/5000 timestepssampled 397/5000 timestepssampled 438/5000 timestepssampled 487/5000 timestepssampled 542/5000 timestepssampled 565/5000 timestepssampled 598/5000 timestepssampled 634/5000 timestepssampled 682/5000 timestepssampled 725/5000 timestepssampled 777/5000 timestepssampled 855/5000 timestepssampled 889/5000 timestepssampled 931/5000 timestepssampled 997/5000 timestepssampled 1049/5000 timestepssampled 1138/5000 timestepssampled 1198/5000 timestepssampled 1243/5000 timestepssampled 1276/5000 timestepssampled 1321/5000 timestepssampled 1363/5000 timestepssampled 1410/5000 timestepssampled 1474/5000 timestepssampled 1514/5000 timestepssampled 1563/5000 timestepssampled 1640/5000 timestepssampled 1688/5000 timestepssampled 1716/5000 timestepssampled 1769/5000 timestepssampled 1852/5000 timestepssampled 1879/5000 timestepssampled 1907/5000 timestepssampled 1935/5000 timestepssampled 1998/5000 timestepssampled 2046/5000 timestepssampled 2105/5000 timestepssampled 2142/5000 timestepssampled 2170/5000 timestepssampled 2222/5000 timestepssampled 2256/5000 timestepssampled 2303/5000 timestepssampled 2392/5000 timestepssampled 2442/5000 timestepssampled 2566/5000 timestepssampled 2599/5000 timestepssampled 2656/5000 timestepssampled 2677/5000 timestepssampled 2734/5000 timestepssampled 2752/5000 timestepssampled 2890/5000 timestepssampled 2932/5000 timestepssampled 2973/5000 timestepssampled 3014/5000 timestepssampled 3035/5000 timestepssampled 3068/5000 timestepssampled 3094/5000 timestepssampled 3177/5000 timestepssampled 3200/5000 timestepssampled 3309/5000 timestepssampled 3351/5000 timestepssampled 3420/5000 timestepssampled 3468/5000 timestepssampled 3494/5000 timestepssampled 3546/5000 timestepssampled 3641/5000 timestepssampled 3713/5000 timestepssampled 3775/5000 timestepssampled 3822/5000 timestepssampled 3860/5000 timestepssampled 3905/5000 timestepssampled 3962/5000 timestepssampled 4013/5000 timestepssampled 4028/5000 timestepssampled 4080/5000 timestepssampled 4121/5000 timestepssampled 4159/5000 timestepssampled 4222/5000 timestepssampled 4275/5000 timestepssampled 4322/5000 timestepssampled 4358/5000 timestepssampled 4434/5000 timestepssampled 4528/5000 timestepssampled 4573/5000 timestepssampled 4629/5000 timestepssampled 4678/5000 timestepssampled 4730/5000 timestepssampled 4750/5000 timestepssampled 4794/5000 timestepssampled 4842/5000 timestepssampled 4911/5000 timestepssampled 4969/5000 timestepssampled 5022/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 44/400 timestepssampled 101/400 timestepssampled 168/400 timestepssampled 219/400 timestepssampled 266/400 timestepssampled 328/400 timestepssampled 408/400 timestepsEval_AverageReturn : 58.28571319580078
+Eval_StdReturn : 11.633870124816895
+Eval_MaxReturn : 80.0
+Eval_MinReturn : 44.0
+Eval_AverageEpLen : 58.285714285714285
+Train_AverageReturn : 50.727272033691406
+Train_StdReturn : 22.284576416015625
+Train_MaxReturn : 138.0
+Train_MinReturn : 15.0
+Train_AverageEpLen : 50.72727272727273
+Train_EnvstepsSoFar : 25084
+TimeSinceStart : 79.20792961120605
+Loss_Critic : 0.7527253031730652
+Loss_Actor : -0.10915419459342957
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 5 ************
+sampled 40/5000 timestepssampled 134/5000 timestepssampled 221/5000 timestepssampled 260/5000 timestepssampled 311/5000 timestepssampled 360/5000 timestepssampled 425/5000 timestepssampled 486/5000 timestepssampled 548/5000 timestepssampled 616/5000 timestepssampled 665/5000 timestepssampled 722/5000 timestepssampled 767/5000 timestepssampled 810/5000 timestepssampled 852/5000 timestepssampled 908/5000 timestepssampled 923/5000 timestepssampled 978/5000 timestepssampled 1029/5000 timestepssampled 1101/5000 timestepssampled 1159/5000 timestepssampled 1213/5000 timestepssampled 1238/5000 timestepssampled 1326/5000 timestepssampled 1392/5000 timestepssampled 1440/5000 timestepssampled 1491/5000 timestepssampled 1584/5000 timestepssampled 1624/5000 timestepssampled 1672/5000 timestepssampled 1698/5000 timestepssampled 1751/5000 timestepssampled 1776/5000 timestepssampled 1819/5000 timestepssampled 1835/5000 timestepssampled 1903/5000 timestepssampled 1931/5000 timestepssampled 1944/5000 timestepssampled 2013/5000 timestepssampled 2036/5000 timestepssampled 2112/5000 timestepssampled 2145/5000 timestepssampled 2167/5000 timestepssampled 2232/5000 timestepssampled 2279/5000 timestepssampled 2307/5000 timestepssampled 2358/5000 timestepssampled 2374/5000 timestepssampled 2415/5000 timestepssampled 2458/5000 timestepssampled 2481/5000 timestepssampled 2538/5000 timestepssampled 2600/5000 timestepssampled 2621/5000 timestepssampled 2636/5000 timestepssampled 2706/5000 timestepssampled 2743/5000 timestepssampled 2793/5000 timestepssampled 2851/5000 timestepssampled 2890/5000 timestepssampled 2939/5000 timestepssampled 3012/5000 timestepssampled 3047/5000 timestepssampled 3089/5000 timestepssampled 3132/5000 timestepssampled 3159/5000 timestepssampled 3191/5000 timestepssampled 3247/5000 timestepssampled 3290/5000 timestepssampled 3355/5000 timestepssampled 3400/5000 timestepssampled 3431/5000 timestepssampled 3481/5000 timestepssampled 3522/5000 timestepssampled 3545/5000 timestepssampled 3620/5000 timestepssampled 3656/5000 timestepssampled 3676/5000 timestepssampled 3727/5000 timestepssampled 3765/5000 timestepssampled 3797/5000 timestepssampled 3819/5000 timestepssampled 3834/5000 timestepssampled 3852/5000 timestepssampled 3936/5000 timestepssampled 3975/5000 timestepssampled 4024/5000 timestepssampled 4093/5000 timestepssampled 4169/5000 timestepssampled 4189/5000 timestepssampled 4278/5000 timestepssampled 4331/5000 timestepssampled 4386/5000 timestepssampled 4437/5000 timestepssampled 4459/5000 timestepssampled 4511/5000 timestepssampled 4587/5000 timestepssampled 4635/5000 timestepssampled 4683/5000 timestepssampled 4734/5000 timestepssampled 4764/5000 timestepssampled 4803/5000 timestepssampled 4849/5000 timestepssampled 4874/5000 timestepssampled 4907/5000 timestepssampled 4955/5000 timestepssampled 4992/5000 timestepssampled 5030/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 61/400 timestepssampled 103/400 timestepssampled 120/400 timestepssampled 140/400 timestepssampled 185/400 timestepssampled 215/400 timestepssampled 285/400 timestepssampled 388/400 timestepssampled 433/400 timestepsEval_AverageReturn : 48.11111068725586
+Eval_StdReturn : 25.387855529785156
+Eval_MaxReturn : 103.0
+Eval_MinReturn : 17.0
+Eval_AverageEpLen : 48.111111111111114
+Train_AverageReturn : 46.574073791503906
+Train_StdReturn : 19.01179313659668
+Train_MaxReturn : 94.0
+Train_MinReturn : 13.0
+Train_AverageEpLen : 46.574074074074076
+Train_EnvstepsSoFar : 30114
+TimeSinceStart : 94.58384490013123
+Loss_Critic : 0.9588056206703186
+Loss_Actor : -0.05487442389130592
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 6 ************
+sampled 44/5000 timestepssampled 93/5000 timestepssampled 105/5000 timestepssampled 152/5000 timestepssampled 227/5000 timestepssampled 242/5000 timestepssampled 309/5000 timestepssampled 353/5000 timestepssampled 419/5000 timestepssampled 470/5000 timestepssampled 544/5000 timestepssampled 565/5000 timestepssampled 612/5000 timestepssampled 658/5000 timestepssampled 720/5000 timestepssampled 781/5000 timestepssampled 830/5000 timestepssampled 923/5000 timestepssampled 961/5000 timestepssampled 1011/5000 timestepssampled 1055/5000 timestepssampled 1103/5000 timestepssampled 1155/5000 timestepssampled 1196/5000 timestepssampled 1231/5000 timestepssampled 1276/5000 timestepssampled 1337/5000 timestepssampled 1389/5000 timestepssampled 1438/5000 timestepssampled 1488/5000 timestepssampled 1549/5000 timestepssampled 1563/5000 timestepssampled 1610/5000 timestepssampled 1660/5000 timestepssampled 1684/5000 timestepssampled 1742/5000 timestepssampled 1789/5000 timestepssampled 1836/5000 timestepssampled 1890/5000 timestepssampled 1933/5000 timestepssampled 1981/5000 timestepssampled 2020/5000 timestepssampled 2042/5000 timestepssampled 2054/5000 timestepssampled 2077/5000 timestepssampled 2147/5000 timestepssampled 2183/5000 timestepssampled 2255/5000 timestepssampled 2298/5000 timestepssampled 2347/5000 timestepssampled 2402/5000 timestepssampled 2443/5000 timestepssampled 2485/5000 timestepssampled 2535/5000 timestepssampled 2580/5000 timestepssampled 2597/5000 timestepssampled 2633/5000 timestepssampled 2702/5000 timestepssampled 2743/5000 timestepssampled 2762/5000 timestepssampled 2815/5000 timestepssampled 2861/5000 timestepssampled 2898/5000 timestepssampled 2913/5000 timestepssampled 2940/5000 timestepssampled 2997/5000 timestepssampled 3048/5000 timestepssampled 3089/5000 timestepssampled 3151/5000 timestepssampled 3220/5000 timestepssampled 3260/5000 timestepssampled 3299/5000 timestepssampled 3337/5000 timestepssampled 3388/5000 timestepssampled 3415/5000 timestepssampled 3431/5000 timestepssampled 3445/5000 timestepssampled 3459/5000 timestepssampled 3519/5000 timestepssampled 3568/5000 timestepssampled 3631/5000 timestepssampled 3667/5000 timestepssampled 3710/5000 timestepssampled 3768/5000 timestepssampled 3824/5000 timestepssampled 3897/5000 timestepssampled 3947/5000 timestepssampled 4004/5000 timestepssampled 4070/5000 timestepssampled 4085/5000 timestepssampled 4130/5000 timestepssampled 4180/5000 timestepssampled 4233/5000 timestepssampled 4301/5000 timestepssampled 4347/5000 timestepssampled 4395/5000 timestepssampled 4467/5000 timestepssampled 4513/5000 timestepssampled 4531/5000 timestepssampled 4570/5000 timestepssampled 4608/5000 timestepssampled 4628/5000 timestepssampled 4719/5000 timestepssampled 4805/5000 timestepssampled 4846/5000 timestepssampled 4893/5000 timestepssampled 4912/5000 timestepssampled 4931/5000 timestepssampled 4980/5000 timestepssampled 5022/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 66/400 timestepssampled 113/400 timestepssampled 176/400 timestepssampled 227/400 timestepssampled 266/400 timestepssampled 301/400 timestepssampled 342/400 timestepssampled 382/400 timestepssampled 416/400 timestepsEval_AverageReturn : 46.22222137451172
+Eval_StdReturn : 11.002805709838867
+Eval_MaxReturn : 66.0
+Eval_MinReturn : 34.0
+Eval_AverageEpLen : 46.22222222222222
+Train_AverageReturn : 45.654544830322266
+Train_StdReturn : 17.42852210998535
+Train_MaxReturn : 93.0
+Train_MinReturn : 12.0
+Train_AverageEpLen : 45.654545454545456
+Train_EnvstepsSoFar : 35136
+TimeSinceStart : 109.69156789779663
+Loss_Critic : 0.9379503726959229
+Loss_Actor : -0.062223318964242935
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 7 ************
+sampled 66/5000 timestepssampled 132/5000 timestepssampled 178/5000 timestepssampled 224/5000 timestepssampled 271/5000 timestepssampled 325/5000 timestepssampled 385/5000 timestepssampled 426/5000 timestepssampled 470/5000 timestepssampled 516/5000 timestepssampled 548/5000 timestepssampled 613/5000 timestepssampled 657/5000 timestepssampled 714/5000 timestepssampled 771/5000 timestepssampled 808/5000 timestepssampled 887/5000 timestepssampled 913/5000 timestepssampled 953/5000 timestepssampled 1014/5000 timestepssampled 1064/5000 timestepssampled 1111/5000 timestepssampled 1159/5000 timestepssampled 1195/5000 timestepssampled 1249/5000 timestepssampled 1268/5000 timestepssampled 1303/5000 timestepssampled 1364/5000 timestepssampled 1414/5000 timestepssampled 1450/5000 timestepssampled 1493/5000 timestepssampled 1561/5000 timestepssampled 1591/5000 timestepssampled 1633/5000 timestepssampled 1693/5000 timestepssampled 1750/5000 timestepssampled 1794/5000 timestepssampled 1854/5000 timestepssampled 1892/5000 timestepssampled 1938/5000 timestepssampled 1976/5000 timestepssampled 2052/5000 timestepssampled 2097/5000 timestepssampled 2163/5000 timestepssampled 2204/5000 timestepssampled 2242/5000 timestepssampled 2332/5000 timestepssampled 2385/5000 timestepssampled 2433/5000 timestepssampled 2532/5000 timestepssampled 2588/5000 timestepssampled 2631/5000 timestepssampled 2684/5000 timestepssampled 2721/5000 timestepssampled 2761/5000 timestepssampled 2797/5000 timestepssampled 2858/5000 timestepssampled 2928/5000 timestepssampled 2961/5000 timestepssampled 3013/5000 timestepssampled 3106/5000 timestepssampled 3152/5000 timestepssampled 3195/5000 timestepssampled 3304/5000 timestepssampled 3385/5000 timestepssampled 3419/5000 timestepssampled 3524/5000 timestepssampled 3572/5000 timestepssampled 3639/5000 timestepssampled 3700/5000 timestepssampled 3739/5000 timestepssampled 3832/5000 timestepssampled 3872/5000 timestepssampled 3917/5000 timestepssampled 3970/5000 timestepssampled 4021/5000 timestepssampled 4069/5000 timestepssampled 4154/5000 timestepssampled 4190/5000 timestepssampled 4204/5000 timestepssampled 4246/5000 timestepssampled 4302/5000 timestepssampled 4354/5000 timestepssampled 4387/5000 timestepssampled 4424/5000 timestepssampled 4478/5000 timestepssampled 4518/5000 timestepssampled 4566/5000 timestepssampled 4613/5000 timestepssampled 4679/5000 timestepssampled 4738/5000 timestepssampled 4776/5000 timestepssampled 4825/5000 timestepssampled 4881/5000 timestepssampled 4919/5000 timestepssampled 4956/5000 timestepssampled 5014/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 72/400 timestepssampled 120/400 timestepssampled 186/400 timestepssampled 227/400 timestepssampled 261/400 timestepssampled 300/400 timestepssampled 361/400 timestepssampled 419/400 timestepsEval_AverageReturn : 52.375
+Eval_StdReturn : 12.951231002807617
+Eval_MaxReturn : 72.0
+Eval_MinReturn : 34.0
+Eval_AverageEpLen : 52.375
+Train_AverageReturn : 51.69072341918945
+Train_StdReturn : 17.35045623779297
+Train_MaxReturn : 109.0
+Train_MinReturn : 14.0
+Train_AverageEpLen : 51.69072164948454
+Train_EnvstepsSoFar : 40150
+TimeSinceStart : 124.10638809204102
+Loss_Critic : 0.5794751048088074
+Loss_Actor : -0.04172701761126518
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 8 ************
+sampled 64/5000 timestepssampled 106/5000 timestepssampled 174/5000 timestepssampled 197/5000 timestepssampled 236/5000 timestepssampled 320/5000 timestepssampled 366/5000 timestepssampled 406/5000 timestepssampled 449/5000 timestepssampled 507/5000 timestepssampled 574/5000 timestepssampled 661/5000 timestepssampled 712/5000 timestepssampled 759/5000 timestepssampled 795/5000 timestepssampled 859/5000 timestepssampled 902/5000 timestepssampled 947/5000 timestepssampled 997/5000 timestepssampled 1042/5000 timestepssampled 1083/5000 timestepssampled 1141/5000 timestepssampled 1184/5000 timestepssampled 1229/5000 timestepssampled 1281/5000 timestepssampled 1333/5000 timestepssampled 1379/5000 timestepssampled 1422/5000 timestepssampled 1492/5000 timestepssampled 1526/5000 timestepssampled 1579/5000 timestepssampled 1652/5000 timestepssampled 1699/5000 timestepssampled 1752/5000 timestepssampled 1803/5000 timestepssampled 1844/5000 timestepssampled 1896/5000 timestepssampled 1940/5000 timestepssampled 1986/5000 timestepssampled 2031/5000 timestepssampled 2074/5000 timestepssampled 2134/5000 timestepssampled 2152/5000 timestepssampled 2217/5000 timestepssampled 2261/5000 timestepssampled 2296/5000 timestepssampled 2364/5000 timestepssampled 2372/5000 timestepssampled 2413/5000 timestepssampled 2470/5000 timestepssampled 2481/5000 timestepssampled 2522/5000 timestepssampled 2565/5000 timestepssampled 2587/5000 timestepssampled 2676/5000 timestepssampled 2696/5000 timestepssampled 2755/5000 timestepssampled 2803/5000 timestepssampled 2847/5000 timestepssampled 2880/5000 timestepssampled 2937/5000 timestepssampled 2982/5000 timestepssampled 3031/5000 timestepssampled 3069/5000 timestepssampled 3116/5000 timestepssampled 3152/5000 timestepssampled 3201/5000 timestepssampled 3236/5000 timestepssampled 3319/5000 timestepssampled 3402/5000 timestepssampled 3429/5000 timestepssampled 3484/5000 timestepssampled 3535/5000 timestepssampled 3576/5000 timestepssampled 3595/5000 timestepssampled 3636/5000 timestepssampled 3690/5000 timestepssampled 3813/5000 timestepssampled 3895/5000 timestepssampled 3939/5000 timestepssampled 3978/5000 timestepssampled 4048/5000 timestepssampled 4099/5000 timestepssampled 4147/5000 timestepssampled 4209/5000 timestepssampled 4229/5000 timestepssampled 4250/5000 timestepssampled 4303/5000 timestepssampled 4348/5000 timestepssampled 4388/5000 timestepssampled 4436/5000 timestepssampled 4477/5000 timestepssampled 4535/5000 timestepssampled 4577/5000 timestepssampled 4636/5000 timestepssampled 4653/5000 timestepssampled 4677/5000 timestepssampled 4708/5000 timestepssampled 4749/5000 timestepssampled 4824/5000 timestepssampled 4865/5000 timestepssampled 4910/5000 timestepssampled 4979/5000 timestepssampled 5042/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 54/400 timestepssampled 107/400 timestepssampled 179/400 timestepssampled 223/400 timestepssampled 268/400 timestepssampled 323/400 timestepssampled 367/400 timestepssampled 428/400 timestepsEval_AverageReturn : 53.5
+Eval_StdReturn : 9.041570663452148
+Eval_MaxReturn : 72.0
+Eval_MinReturn : 44.0
+Eval_AverageEpLen : 53.5
+Train_AverageReturn : 48.480770111083984
+Train_StdReturn : 17.749853134155273
+Train_MaxReturn : 123.0
+Train_MinReturn : 8.0
+Train_AverageEpLen : 48.48076923076923
+Train_EnvstepsSoFar : 45192
+TimeSinceStart : 138.40992498397827
+Loss_Critic : 0.942365288734436
+Loss_Actor : -0.025758638978004456
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 9 ************
+sampled 33/5000 timestepssampled 91/5000 timestepssampled 143/5000 timestepssampled 184/5000 timestepssampled 252/5000 timestepssampled 290/5000 timestepssampled 318/5000 timestepssampled 331/5000 timestepssampled 371/5000 timestepssampled 389/5000 timestepssampled 422/5000 timestepssampled 460/5000 timestepssampled 501/5000 timestepssampled 551/5000 timestepssampled 591/5000 timestepssampled 638/5000 timestepssampled 685/5000 timestepssampled 711/5000 timestepssampled 753/5000 timestepssampled 786/5000 timestepssampled 820/5000 timestepssampled 866/5000 timestepssampled 904/5000 timestepssampled 950/5000 timestepssampled 983/5000 timestepssampled 1036/5000 timestepssampled 1076/5000 timestepssampled 1115/5000 timestepssampled 1155/5000 timestepssampled 1207/5000 timestepssampled 1252/5000 timestepssampled 1291/5000 timestepssampled 1337/5000 timestepssampled 1377/5000 timestepssampled 1428/5000 timestepssampled 1466/5000 timestepssampled 1494/5000 timestepssampled 1548/5000 timestepssampled 1580/5000 timestepssampled 1594/5000 timestepssampled 1685/5000 timestepssampled 1728/5000 timestepssampled 1768/5000 timestepssampled 1806/5000 timestepssampled 1842/5000 timestepssampled 1890/5000 timestepssampled 1950/5000 timestepssampled 1993/5000 timestepssampled 2048/5000 timestepssampled 2063/5000 timestepssampled 2108/5000 timestepssampled 2125/5000 timestepssampled 2133/5000 timestepssampled 2182/5000 timestepssampled 2196/5000 timestepssampled 2218/5000 timestepssampled 2303/5000 timestepssampled 2362/5000 timestepssampled 2404/5000 timestepssampled 2500/5000 timestepssampled 2574/5000 timestepssampled 2622/5000 timestepssampled 2661/5000 timestepssampled 2708/5000 timestepssampled 2750/5000 timestepssampled 2814/5000 timestepssampled 2864/5000 timestepssampled 2923/5000 timestepssampled 2966/5000 timestepssampled 3012/5000 timestepssampled 3053/5000 timestepssampled 3112/5000 timestepssampled 3152/5000 timestepssampled 3200/5000 timestepssampled 3225/5000 timestepssampled 3281/5000 timestepssampled 3350/5000 timestepssampled 3421/5000 timestepssampled 3457/5000 timestepssampled 3492/5000 timestepssampled 3531/5000 timestepssampled 3571/5000 timestepssampled 3610/5000 timestepssampled 3652/5000 timestepssampled 3738/5000 timestepssampled 3778/5000 timestepssampled 3818/5000 timestepssampled 3869/5000 timestepssampled 3935/5000 timestepssampled 4017/5000 timestepssampled 4055/5000 timestepssampled 4071/5000 timestepssampled 4155/5000 timestepssampled 4194/5000 timestepssampled 4240/5000 timestepssampled 4289/5000 timestepssampled 4319/5000 timestepssampled 4361/5000 timestepssampled 4370/5000 timestepssampled 4416/5000 timestepssampled 4473/5000 timestepssampled 4490/5000 timestepssampled 4529/5000 timestepssampled 4583/5000 timestepssampled 4627/5000 timestepssampled 4649/5000 timestepssampled 4692/5000 timestepssampled 4750/5000 timestepssampled 4797/5000 timestepssampled 4833/5000 timestepssampled 4893/5000 timestepssampled 4929/5000 timestepssampled 5005/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 53/400 timestepssampled 99/400 timestepssampled 143/400 timestepssampled 188/400 timestepssampled 231/400 timestepssampled 308/400 timestepssampled 368/400 timestepssampled 433/400 timestepsEval_AverageReturn : 54.125
+Eval_StdReturn : 11.472112655639648
+Eval_MaxReturn : 77.0
+Eval_MinReturn : 43.0
+Eval_AverageEpLen : 54.125
+Train_AverageReturn : 44.29203414916992
+Train_StdReturn : 16.815332412719727
+Train_MaxReturn : 96.0
+Train_MinReturn : 8.0
+Train_AverageEpLen : 44.29203539823009
+Train_EnvstepsSoFar : 50197
+TimeSinceStart : 152.71095275878906
+Loss_Critic : 1.0799674987792969
+Loss_Actor : -0.08049656450748444
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 10 ************
+sampled 14/5000 timestepssampled 54/5000 timestepssampled 75/5000 timestepssampled 96/5000 timestepssampled 111/5000 timestepssampled 131/5000 timestepssampled 187/5000 timestepssampled 229/5000 timestepssampled 270/5000 timestepssampled 319/5000 timestepssampled 384/5000 timestepssampled 449/5000 timestepssampled 499/5000 timestepssampled 552/5000 timestepssampled 590/5000 timestepssampled 626/5000 timestepssampled 669/5000 timestepssampled 721/5000 timestepssampled 749/5000 timestepssampled 773/5000 timestepssampled 807/5000 timestepssampled 850/5000 timestepssampled 901/5000 timestepssampled 948/5000 timestepssampled 990/5000 timestepssampled 1024/5000 timestepssampled 1058/5000 timestepssampled 1089/5000 timestepssampled 1161/5000 timestepssampled 1206/5000 timestepssampled 1242/5000 timestepssampled 1286/5000 timestepssampled 1394/5000 timestepssampled 1428/5000 timestepssampled 1474/5000 timestepssampled 1524/5000 timestepssampled 1587/5000 timestepssampled 1608/5000 timestepssampled 1656/5000 timestepssampled 1676/5000 timestepssampled 1711/5000 timestepssampled 1725/5000 timestepssampled 1795/5000 timestepssampled 1829/5000 timestepssampled 1876/5000 timestepssampled 1925/5000 timestepssampled 1957/5000 timestepssampled 2023/5000 timestepssampled 2067/5000 timestepssampled 2099/5000 timestepssampled 2118/5000 timestepssampled 2167/5000 timestepssampled 2190/5000 timestepssampled 2261/5000 timestepssampled 2326/5000 timestepssampled 2365/5000 timestepssampled 2402/5000 timestepssampled 2434/5000 timestepssampled 2485/5000 timestepssampled 2501/5000 timestepssampled 2548/5000 timestepssampled 2624/5000 timestepssampled 2664/5000 timestepssampled 2709/5000 timestepssampled 2776/5000 timestepssampled 2838/5000 timestepssampled 2914/5000 timestepssampled 2971/5000 timestepssampled 3010/5000 timestepssampled 3019/5000 timestepssampled 3078/5000 timestepssampled 3122/5000 timestepssampled 3177/5000 timestepssampled 3217/5000 timestepssampled 3259/5000 timestepssampled 3300/5000 timestepssampled 3335/5000 timestepssampled 3418/5000 timestepssampled 3489/5000 timestepssampled 3572/5000 timestepssampled 3608/5000 timestepssampled 3654/5000 timestepssampled 3729/5000 timestepssampled 3777/5000 timestepssampled 3790/5000 timestepssampled 3806/5000 timestepssampled 3882/5000 timestepssampled 3908/5000 timestepssampled 3967/5000 timestepssampled 4047/5000 timestepssampled 4124/5000 timestepssampled 4186/5000 timestepssampled 4233/5000 timestepssampled 4281/5000 timestepssampled 4329/5000 timestepssampled 4364/5000 timestepssampled 4399/5000 timestepssampled 4440/5000 timestepssampled 4539/5000 timestepssampled 4613/5000 timestepssampled 4657/5000 timestepssampled 4697/5000 timestepssampled 4733/5000 timestepssampled 4773/5000 timestepssampled 4818/5000 timestepssampled 4864/5000 timestepssampled 4902/5000 timestepssampled 4912/5000 timestepssampled 5003/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 40/400 timestepssampled 57/400 timestepssampled 103/400 timestepssampled 206/400 timestepssampled 245/400 timestepssampled 300/400 timestepssampled 316/400 timestepssampled 350/400 timestepssampled 396/400 timestepssampled 436/400 timestepsEval_AverageReturn : 43.599998474121094
+Eval_StdReturn : 22.974767684936523
+Eval_MaxReturn : 103.0
+Eval_MinReturn : 16.0
+Eval_AverageEpLen : 43.6
+Train_AverageReturn : 45.89908218383789
+Train_StdReturn : 19.45540428161621
+Train_MaxReturn : 108.0
+Train_MinReturn : 9.0
+Train_AverageEpLen : 45.89908256880734
+Train_EnvstepsSoFar : 55200
+TimeSinceStart : 167.05663061141968
+Loss_Critic : 1.0007917881011963
+Loss_Actor : -0.09284065663814545
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 11 ************
+sampled 41/5000 timestepssampled 59/5000 timestepssampled 99/5000 timestepssampled 183/5000 timestepssampled 234/5000 timestepssampled 273/5000 timestepssampled 326/5000 timestepssampled 362/5000 timestepssampled 380/5000 timestepssampled 392/5000 timestepssampled 442/5000 timestepssampled 483/5000 timestepssampled 520/5000 timestepssampled 575/5000 timestepssampled 636/5000 timestepssampled 703/5000 timestepssampled 744/5000 timestepssampled 782/5000 timestepssampled 832/5000 timestepssampled 877/5000 timestepssampled 965/5000 timestepssampled 1039/5000 timestepssampled 1121/5000 timestepssampled 1164/5000 timestepssampled 1290/5000 timestepssampled 1353/5000 timestepssampled 1396/5000 timestepssampled 1469/5000 timestepssampled 1505/5000 timestepssampled 1541/5000 timestepssampled 1606/5000 timestepssampled 1643/5000 timestepssampled 1691/5000 timestepssampled 1755/5000 timestepssampled 1807/5000 timestepssampled 1893/5000 timestepssampled 1939/5000 timestepssampled 2009/5000 timestepssampled 2075/5000 timestepssampled 2119/5000 timestepssampled 2165/5000 timestepssampled 2226/5000 timestepssampled 2300/5000 timestepssampled 2384/5000 timestepssampled 2435/5000 timestepssampled 2478/5000 timestepssampled 2512/5000 timestepssampled 2560/5000 timestepssampled 2614/5000 timestepssampled 2697/5000 timestepssampled 2743/5000 timestepssampled 2816/5000 timestepssampled 2883/5000 timestepssampled 2925/5000 timestepssampled 2969/5000 timestepssampled 3006/5000 timestepssampled 3094/5000 timestepssampled 3163/5000 timestepssampled 3209/5000 timestepssampled 3252/5000 timestepssampled 3296/5000 timestepssampled 3373/5000 timestepssampled 3441/5000 timestepssampled 3498/5000 timestepssampled 3576/5000 timestepssampled 3660/5000 timestepssampled 3697/5000 timestepssampled 3714/5000 timestepssampled 3800/5000 timestepssampled 3857/5000 timestepssampled 3967/5000 timestepssampled 3995/5000 timestepssampled 4082/5000 timestepssampled 4127/5000 timestepssampled 4196/5000 timestepssampled 4243/5000 timestepssampled 4280/5000 timestepssampled 4356/5000 timestepssampled 4441/5000 timestepssampled 4507/5000 timestepssampled 4581/5000 timestepssampled 4618/5000 timestepssampled 4688/5000 timestepssampled 4739/5000 timestepssampled 4840/5000 timestepssampled 4890/5000 timestepssampled 4966/5000 timestepssampled 5011/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 34/400 timestepssampled 101/400 timestepssampled 221/400 timestepssampled 298/400 timestepssampled 389/400 timestepssampled 451/400 timestepsEval_AverageReturn : 75.16666412353516
+Eval_StdReturn : 26.45383644104004
+Eval_MaxReturn : 120.0
+Eval_MinReturn : 34.0
+Eval_AverageEpLen : 75.16666666666667
+Train_AverageReturn : 56.943180084228516
+Train_StdReturn : 21.056936264038086
+Train_MaxReturn : 126.0
+Train_MinReturn : 12.0
+Train_AverageEpLen : 56.94318181818182
+Train_EnvstepsSoFar : 60211
+TimeSinceStart : 181.1928539276123
+Loss_Critic : 0.632148802280426
+Loss_Actor : -0.06652083247900009
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 12 ************
+sampled 80/5000 timestepssampled 147/5000 timestepssampled 222/5000 timestepssampled 244/5000 timestepssampled 304/5000 timestepssampled 351/5000 timestepssampled 410/5000 timestepssampled 458/5000 timestepssampled 539/5000 timestepssampled 605/5000 timestepssampled 658/5000 timestepssampled 715/5000 timestepssampled 774/5000 timestepssampled 866/5000 timestepssampled 910/5000 timestepssampled 973/5000 timestepssampled 1031/5000 timestepssampled 1043/5000 timestepssampled 1107/5000 timestepssampled 1180/5000 timestepssampled 1298/5000 timestepssampled 1387/5000 timestepssampled 1463/5000 timestepssampled 1502/5000 timestepssampled 1589/5000 timestepssampled 1642/5000 timestepssampled 1713/5000 timestepssampled 1745/5000 timestepssampled 1830/5000 timestepssampled 1870/5000 timestepssampled 1955/5000 timestepssampled 2021/5000 timestepssampled 2108/5000 timestepssampled 2164/5000 timestepssampled 2239/5000 timestepssampled 2322/5000 timestepssampled 2409/5000 timestepssampled 2510/5000 timestepssampled 2580/5000 timestepssampled 2644/5000 timestepssampled 2682/5000 timestepssampled 2775/5000 timestepssampled 2815/5000 timestepssampled 2877/5000 timestepssampled 2899/5000 timestepssampled 2978/5000 timestepssampled 3048/5000 timestepssampled 3096/5000 timestepssampled 3175/5000 timestepssampled 3266/5000 timestepssampled 3330/5000 timestepssampled 3374/5000 timestepssampled 3415/5000 timestepssampled 3463/5000 timestepssampled 3507/5000 timestepssampled 3593/5000 timestepssampled 3704/5000 timestepssampled 3785/5000 timestepssampled 3850/5000 timestepssampled 3891/5000 timestepssampled 3905/5000 timestepssampled 3942/5000 timestepssampled 3995/5000 timestepssampled 4072/5000 timestepssampled 4120/5000 timestepssampled 4207/5000 timestepssampled 4241/5000 timestepssampled 4323/5000 timestepssampled 4409/5000 timestepssampled 4466/5000 timestepssampled 4544/5000 timestepssampled 4639/5000 timestepssampled 4689/5000 timestepssampled 4773/5000 timestepssampled 4854/5000 timestepssampled 4911/5000 timestepssampled 5002/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 122/400 timestepssampled 238/400 timestepssampled 275/400 timestepssampled 382/400 timestepssampled 418/400 timestepsEval_AverageReturn : 83.5999984741211
+Eval_StdReturn : 38.753578186035156
+Eval_MaxReturn : 122.0
+Eval_MinReturn : 36.0
+Eval_AverageEpLen : 83.6
+Train_AverageReturn : 64.9610366821289
+Train_StdReturn : 21.9127197265625
+Train_MaxReturn : 118.0
+Train_MinReturn : 12.0
+Train_AverageEpLen : 64.96103896103897
+Train_EnvstepsSoFar : 65213
+TimeSinceStart : 195.60695481300354
+Loss_Critic : 0.47173988819122314
+Loss_Actor : -0.06983371824026108
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 13 ************
+sampled 84/5000 timestepssampled 184/5000 timestepssampled 255/5000 timestepssampled 361/5000 timestepssampled 454/5000 timestepssampled 568/5000 timestepssampled 650/5000 timestepssampled 763/5000 timestepssampled 822/5000 timestepssampled 882/5000 timestepssampled 1043/5000 timestepssampled 1130/5000 timestepssampled 1220/5000 timestepssampled 1314/5000 timestepssampled 1401/5000 timestepssampled 1483/5000 timestepssampled 1632/5000 timestepssampled 1716/5000 timestepssampled 1805/5000 timestepssampled 1893/5000 timestepssampled 1966/5000 timestepssampled 2007/5000 timestepssampled 2121/5000 timestepssampled 2194/5000 timestepssampled 2324/5000 timestepssampled 2402/5000 timestepssampled 2482/5000 timestepssampled 2523/5000 timestepssampled 2621/5000 timestepssampled 2709/5000 timestepssampled 2807/5000 timestepssampled 2881/5000 timestepssampled 2948/5000 timestepssampled 3062/5000 timestepssampled 3146/5000 timestepssampled 3212/5000 timestepssampled 3251/5000 timestepssampled 3340/5000 timestepssampled 3404/5000 timestepssampled 3520/5000 timestepssampled 3620/5000 timestepssampled 3707/5000 timestepssampled 3770/5000 timestepssampled 3898/5000 timestepssampled 3970/5000 timestepssampled 4059/5000 timestepssampled 4164/5000 timestepssampled 4203/5000 timestepssampled 4247/5000 timestepssampled 4337/5000 timestepssampled 4393/5000 timestepssampled 4489/5000 timestepssampled 4543/5000 timestepssampled 4613/5000 timestepssampled 4714/5000 timestepssampled 4792/5000 timestepssampled 5006/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 130/400 timestepssampled 287/400 timestepssampled 402/400 timestepsEval_AverageReturn : 134.0
+Eval_StdReturn : 17.37814712524414
+Eval_MaxReturn : 157.0
+Eval_MinReturn : 115.0
+Eval_AverageEpLen : 134.0
+Train_AverageReturn : 87.8245620727539
+Train_StdReturn : 30.2388858795166
+Train_MaxReturn : 214.0
+Train_MinReturn : 39.0
+Train_AverageEpLen : 87.82456140350877
+Train_EnvstepsSoFar : 70219
+TimeSinceStart : 209.78733253479004
+Loss_Critic : 0.38001003861427307
+Loss_Actor : -0.07198060303926468
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 14 ************
+sampled 103/5000 timestepssampled 235/5000 timestepssampled 348/5000 timestepssampled 417/5000 timestepssampled 607/5000 timestepssampled 779/5000 timestepssampled 950/5000 timestepssampled 1072/5000 timestepssampled 1190/5000 timestepssampled 1338/5000 timestepssampled 1489/5000 timestepssampled 1598/5000 timestepssampled 1698/5000 timestepssampled 1763/5000 timestepssampled 1835/5000 timestepssampled 1924/5000 timestepssampled 2003/5000 timestepssampled 2126/5000 timestepssampled 2212/5000 timestepssampled 2246/5000 timestepssampled 2358/5000 timestepssampled 2443/5000 timestepssampled 2498/5000 timestepssampled 2649/5000 timestepssampled 2818/5000 timestepssampled 2852/5000 timestepssampled 3033/5000 timestepssampled 3135/5000 timestepssampled 3278/5000 timestepssampled 3378/5000 timestepssampled 3512/5000 timestepssampled 3708/5000 timestepssampled 3913/5000 timestepssampled 4086/5000 timestepssampled 4155/5000 timestepssampled 4233/5000 timestepssampled 4326/5000 timestepssampled 4397/5000 timestepssampled 4465/5000 timestepssampled 4637/5000 timestepssampled 4742/5000 timestepssampled 4868/5000 timestepssampled 4936/5000 timestepssampled 5049/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 94/400 timestepssampled 267/400 timestepssampled 369/400 timestepssampled 428/400 timestepsEval_AverageReturn : 107.0
+Eval_StdReturn : 41.39444351196289
+Eval_MaxReturn : 173.0
+Eval_MinReturn : 59.0
+Eval_AverageEpLen : 107.0
+Train_AverageReturn : 114.75
+Train_StdReturn : 43.70621109008789
+Train_MaxReturn : 205.0
+Train_MinReturn : 34.0
+Train_AverageEpLen : 114.75
+Train_EnvstepsSoFar : 75268
+TimeSinceStart : 224.16899228096008
+Loss_Critic : 0.7126379609107971
+Loss_Actor : -0.08678190410137177
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 15 ************
+sampled 95/5000 timestepssampled 171/5000 timestepssampled 220/5000 timestepssampled 392/5000 timestepssampled 477/5000 timestepssampled 708/5000 timestepssampled 833/5000 timestepssampled 988/5000 timestepssampled 1174/5000 timestepssampled 1326/5000 timestepssampled 1370/5000 timestepssampled 1493/5000 timestepssampled 1579/5000 timestepssampled 1674/5000 timestepssampled 1751/5000 timestepssampled 1792/5000 timestepssampled 1886/5000 timestepssampled 1939/5000 timestepssampled 2008/5000 timestepssampled 2104/5000 timestepssampled 2208/5000 timestepssampled 2290/5000 timestepssampled 2489/5000 timestepssampled 2550/5000 timestepssampled 2626/5000 timestepssampled 2733/5000 timestepssampled 2819/5000 timestepssampled 2965/5000 timestepssampled 3054/5000 timestepssampled 3202/5000 timestepssampled 3358/5000 timestepssampled 3434/5000 timestepssampled 3519/5000 timestepssampled 3627/5000 timestepssampled 3760/5000 timestepssampled 3828/5000 timestepssampled 3954/5000 timestepssampled 4041/5000 timestepssampled 4150/5000 timestepssampled 4270/5000 timestepssampled 4392/5000 timestepssampled 4471/5000 timestepssampled 4740/5000 timestepssampled 4808/5000 timestepssampled 4876/5000 timestepssampled 4923/5000 timestepssampled 5011/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 61/400 timestepssampled 171/400 timestepssampled 251/400 timestepssampled 321/400 timestepssampled 454/400 timestepsEval_AverageReturn : 90.80000305175781
+Eval_StdReturn : 26.78357696533203
+Eval_MaxReturn : 133.0
+Eval_MinReturn : 61.0
+Eval_AverageEpLen : 90.8
+Train_AverageReturn : 106.61701965332031
+Train_StdReturn : 47.832401275634766
+Train_MaxReturn : 269.0
+Train_MinReturn : 41.0
+Train_AverageEpLen : 106.61702127659575
+Train_EnvstepsSoFar : 80279
+TimeSinceStart : 238.71023631095886
+Loss_Critic : 0.4879354238510132
+Loss_Actor : -0.08607878535985947
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 16 ************
+sampled 91/5000 timestepssampled 175/5000 timestepssampled 253/5000 timestepssampled 389/5000 timestepssampled 461/5000 timestepssampled 550/5000 timestepssampled 635/5000 timestepssampled 704/5000 timestepssampled 796/5000 timestepssampled 863/5000 timestepssampled 930/5000 timestepssampled 1013/5000 timestepssampled 1100/5000 timestepssampled 1181/5000 timestepssampled 1243/5000 timestepssampled 1357/5000 timestepssampled 1451/5000 timestepssampled 1533/5000 timestepssampled 1609/5000 timestepssampled 1709/5000 timestepssampled 1805/5000 timestepssampled 1894/5000 timestepssampled 1966/5000 timestepssampled 2051/5000 timestepssampled 2146/5000 timestepssampled 2212/5000 timestepssampled 2290/5000 timestepssampled 2362/5000 timestepssampled 2492/5000 timestepssampled 2572/5000 timestepssampled 2672/5000 timestepssampled 2758/5000 timestepssampled 2819/5000 timestepssampled 2917/5000 timestepssampled 2994/5000 timestepssampled 3083/5000 timestepssampled 3157/5000 timestepssampled 3263/5000 timestepssampled 3357/5000 timestepssampled 3410/5000 timestepssampled 3477/5000 timestepssampled 3553/5000 timestepssampled 3626/5000 timestepssampled 3702/5000 timestepssampled 3775/5000 timestepssampled 3886/5000 timestepssampled 3959/5000 timestepssampled 4028/5000 timestepssampled 4081/5000 timestepssampled 4168/5000 timestepssampled 4204/5000 timestepssampled 4280/5000 timestepssampled 4361/5000 timestepssampled 4451/5000 timestepssampled 4591/5000 timestepssampled 4680/5000 timestepssampled 4807/5000 timestepssampled 4900/5000 timestepssampled 4964/5000 timestepssampled 5055/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 78/400 timestepssampled 187/400 timestepssampled 264/400 timestepssampled 325/400 timestepssampled 407/400 timestepsEval_AverageReturn : 81.4000015258789
+Eval_StdReturn : 15.5512056350708
+Eval_MaxReturn : 109.0
+Eval_MinReturn : 61.0
+Eval_AverageEpLen : 81.4
+Train_AverageReturn : 84.25
+Train_StdReturn : 19.183868408203125
+Train_MaxReturn : 140.0
+Train_MinReturn : 36.0
+Train_AverageEpLen : 84.25
+Train_EnvstepsSoFar : 85334
+TimeSinceStart : 253.0816833972931
+Loss_Critic : 0.2527064085006714
+Loss_Actor : -0.05525727570056915
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 17 ************
+sampled 93/5000 timestepssampled 203/5000 timestepssampled 320/5000 timestepssampled 408/5000 timestepssampled 479/5000 timestepssampled 582/5000 timestepssampled 654/5000 timestepssampled 726/5000 timestepssampled 809/5000 timestepssampled 861/5000 timestepssampled 947/5000 timestepssampled 1012/5000 timestepssampled 1101/5000 timestepssampled 1182/5000 timestepssampled 1267/5000 timestepssampled 1373/5000 timestepssampled 1433/5000 timestepssampled 1598/5000 timestepssampled 1654/5000 timestepssampled 1742/5000 timestepssampled 1849/5000 timestepssampled 1911/5000 timestepssampled 2015/5000 timestepssampled 2147/5000 timestepssampled 2235/5000 timestepssampled 2325/5000 timestepssampled 2405/5000 timestepssampled 2498/5000 timestepssampled 2589/5000 timestepssampled 2673/5000 timestepssampled 2738/5000 timestepssampled 2834/5000 timestepssampled 2958/5000 timestepssampled 3059/5000 timestepssampled 3232/5000 timestepssampled 3281/5000 timestepssampled 3348/5000 timestepssampled 3472/5000 timestepssampled 3554/5000 timestepssampled 3666/5000 timestepssampled 3746/5000 timestepssampled 3828/5000 timestepssampled 3913/5000 timestepssampled 3974/5000 timestepssampled 4065/5000 timestepssampled 4281/5000 timestepssampled 4498/5000 timestepssampled 4578/5000 timestepssampled 4652/5000 timestepssampled 4746/5000 timestepssampled 4843/5000 timestepssampled 4955/5000 timestepssampled 5021/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 135/400 timestepssampled 317/400 timestepssampled 445/400 timestepsEval_AverageReturn : 148.3333282470703
+Eval_StdReturn : 23.976839065551758
+Eval_MaxReturn : 182.0
+Eval_MinReturn : 128.0
+Eval_AverageEpLen : 148.33333333333334
+Train_AverageReturn : 94.73584747314453
+Train_StdReturn : 34.13467025756836
+Train_MaxReturn : 217.0
+Train_MinReturn : 49.0
+Train_AverageEpLen : 94.73584905660377
+Train_EnvstepsSoFar : 90355
+TimeSinceStart : 267.38429403305054
+Loss_Critic : 0.24540886282920837
+Loss_Actor : -0.10245261341333389
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 18 ************
+sampled 162/5000 timestepssampled 248/5000 timestepssampled 350/5000 timestepssampled 450/5000 timestepssampled 606/5000 timestepssampled 812/5000 timestepssampled 975/5000 timestepssampled 1064/5000 timestepssampled 1122/5000 timestepssampled 1228/5000 timestepssampled 1326/5000 timestepssampled 1528/5000 timestepssampled 1665/5000 timestepssampled 1829/5000 timestepssampled 1909/5000 timestepssampled 2006/5000 timestepssampled 2094/5000 timestepssampled 2183/5000 timestepssampled 2298/5000 timestepssampled 2503/5000 timestepssampled 2822/5000 timestepssampled 2985/5000 timestepssampled 3113/5000 timestepssampled 3269/5000 timestepssampled 3341/5000 timestepssampled 3504/5000 timestepssampled 3638/5000 timestepssampled 3902/5000 timestepssampled 4014/5000 timestepssampled 4177/5000 timestepssampled 4269/5000 timestepssampled 4419/5000 timestepssampled 4508/5000 timestepssampled 4626/5000 timestepssampled 4749/5000 timestepssampled 4908/5000 timestepssampled 5013/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 184/400 timestepssampled 274/400 timestepssampled 457/400 timestepsEval_AverageReturn : 152.3333282470703
+Eval_StdReturn : 44.07821273803711
+Eval_MaxReturn : 184.0
+Eval_MinReturn : 90.0
+Eval_AverageEpLen : 152.33333333333334
+Train_AverageReturn : 135.48648071289062
+Train_StdReturn : 53.352787017822266
+Train_MaxReturn : 319.0
+Train_MinReturn : 58.0
+Train_AverageEpLen : 135.48648648648648
+Train_EnvstepsSoFar : 95368
+TimeSinceStart : 282.1760799884796
+Loss_Critic : 0.10960668325424194
+Loss_Actor : -0.05485121160745621
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 19 ************
+sampled 130/5000 timestepssampled 224/5000 timestepssampled 339/5000 timestepssampled 435/5000 timestepssampled 642/5000 timestepssampled 764/5000 timestepssampled 924/5000 timestepssampled 1045/5000 timestepssampled 1194/5000 timestepssampled 1237/5000 timestepssampled 1342/5000 timestepssampled 1485/5000 timestepssampled 1644/5000 timestepssampled 1945/5000 timestepssampled 2068/5000 timestepssampled 2157/5000 timestepssampled 2198/5000 timestepssampled 2281/5000 timestepssampled 2464/5000 timestepssampled 2615/5000 timestepssampled 2730/5000 timestepssampled 2866/5000 timestepssampled 3030/5000 timestepssampled 3215/5000 timestepssampled 3371/5000 timestepssampled 3554/5000 timestepssampled 3704/5000 timestepssampled 3772/5000 timestepssampled 3931/5000 timestepssampled 4054/5000 timestepssampled 4226/5000 timestepssampled 4320/5000 timestepssampled 4383/5000 timestepssampled 4622/5000 timestepssampled 4721/5000 timestepssampled 4866/5000 timestepssampled 5020/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 150/400 timestepssampled 249/400 timestepssampled 471/400 timestepsEval_AverageReturn : 157.0
+Eval_StdReturn : 50.45790481567383
+Eval_MaxReturn : 222.0
+Eval_MinReturn : 99.0
+Eval_AverageEpLen : 157.0
+Train_AverageReturn : 135.67567443847656
+Train_StdReturn : 51.1035270690918
+Train_MaxReturn : 301.0
+Train_MinReturn : 41.0
+Train_AverageEpLen : 135.67567567567568
+Train_EnvstepsSoFar : 100388
+TimeSinceStart : 297.24612736701965
+Loss_Critic : 0.2735283374786377
+Loss_Actor : -0.0781778022646904
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 20 ************
+sampled 113/5000 timestepssampled 276/5000 timestepssampled 375/5000 timestepssampled 431/5000 timestepssampled 523/5000 timestepssampled 641/5000 timestepssampled 759/5000 timestepssampled 866/5000 timestepssampled 1039/5000 timestepssampled 1155/5000 timestepssampled 1301/5000 timestepssampled 1406/5000 timestepssampled 1566/5000 timestepssampled 1745/5000 timestepssampled 1848/5000 timestepssampled 2065/5000 timestepssampled 2268/5000 timestepssampled 2350/5000 timestepssampled 2444/5000 timestepssampled 2590/5000 timestepssampled 2726/5000 timestepssampled 2905/5000 timestepssampled 3014/5000 timestepssampled 3141/5000 timestepssampled 3313/5000 timestepssampled 3479/5000 timestepssampled 3590/5000 timestepssampled 3860/5000 timestepssampled 3940/5000 timestepssampled 4088/5000 timestepssampled 4237/5000 timestepssampled 4310/5000 timestepssampled 4497/5000 timestepssampled 4728/5000 timestepssampled 4869/5000 timestepssampled 4993/5000 timestepssampled 5130/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 237/400 timestepssampled 364/400 timestepssampled 587/400 timestepsEval_AverageReturn : 195.6666717529297
+Eval_StdReturn : 48.88990020751953
+Eval_MaxReturn : 237.0
+Eval_MinReturn : 127.0
+Eval_AverageEpLen : 195.66666666666666
+Train_AverageReturn : 138.64865112304688
+Train_StdReturn : 45.623741149902344
+Train_MaxReturn : 270.0
+Train_MinReturn : 56.0
+Train_AverageEpLen : 138.64864864864865
+Train_EnvstepsSoFar : 105518
+TimeSinceStart : 312.79018807411194
+Loss_Critic : 0.22090624272823334
+Loss_Actor : -0.07682690769433975
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 21 ************
+sampled 415/5000 timestepssampled 582/5000 timestepssampled 662/5000 timestepssampled 728/5000 timestepssampled 834/5000 timestepssampled 966/5000 timestepssampled 1192/5000 timestepssampled 1381/5000 timestepssampled 1495/5000 timestepssampled 1696/5000 timestepssampled 1907/5000 timestepssampled 2061/5000 timestepssampled 2520/5000 timestepssampled 2656/5000 timestepssampled 2825/5000 timestepssampled 2960/5000 timestepssampled 3120/5000 timestepssampled 3249/5000 timestepssampled 3452/5000 timestepssampled 3989/5000 timestepssampled 4168/5000 timestepssampled 4297/5000 timestepssampled 4456/5000 timestepssampled 4500/5000 timestepssampled 4754/5000 timestepssampled 4860/5000 timestepssampled 5003/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 71/400 timestepssampled 299/400 timestepssampled 522/400 timestepsEval_AverageReturn : 174.0
+Eval_StdReturn : 72.860595703125
+Eval_MaxReturn : 228.0
+Eval_MinReturn : 71.0
+Eval_AverageEpLen : 174.0
+Train_AverageReturn : 185.29629516601562
+Train_StdReturn : 112.34959411621094
+Train_MaxReturn : 537.0
+Train_MinReturn : 44.0
+Train_AverageEpLen : 185.2962962962963
+Train_EnvstepsSoFar : 110521
+TimeSinceStart : 326.83919191360474
+Loss_Critic : 0.2607130706310272
+Loss_Actor : -0.11901861429214478
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 22 ************
+sampled 235/5000 timestepssampled 291/5000 timestepssampled 719/5000 timestepssampled 1030/5000 timestepssampled 1401/5000 timestepssampled 1632/5000 timestepssampled 1789/5000 timestepssampled 2036/5000 timestepssampled 2349/5000 timestepssampled 2418/5000 timestepssampled 2658/5000 timestepssampled 2856/5000 timestepssampled 3022/5000 timestepssampled 3267/5000 timestepssampled 3475/5000 timestepssampled 3554/5000 timestepssampled 3701/5000 timestepssampled 4041/5000 timestepssampled 4546/5000 timestepssampled 4598/5000 timestepssampled 4778/5000 timestepssampled 5012/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 149/400 timestepssampled 402/400 timestepsEval_AverageReturn : 201.0
+Eval_StdReturn : 52.0
+Eval_MaxReturn : 253.0
+Eval_MinReturn : 149.0
+Eval_AverageEpLen : 201.0
+Train_AverageReturn : 227.81817626953125
+Train_StdReturn : 115.1708755493164
+Train_MaxReturn : 505.0
+Train_MinReturn : 52.0
+Train_AverageEpLen : 227.8181818181818
+Train_EnvstepsSoFar : 115533
+TimeSinceStart : 338.68633913993835
+Loss_Critic : 0.32671040296554565
+Loss_Actor : -0.06307955831289291
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 23 ************
+sampled 547/5000 timestepssampled 814/5000 timestepssampled 1081/5000 timestepssampled 1253/5000 timestepssampled 1440/5000 timestepssampled 1739/5000 timestepssampled 1916/5000 timestepssampled 2144/5000 timestepssampled 2461/5000 timestepssampled 2772/5000 timestepssampled 2823/5000 timestepssampled 2991/5000 timestepssampled 3383/5000 timestepssampled 3631/5000 timestepssampled 3999/5000 timestepssampled 4320/5000 timestepssampled 4676/5000 timestepssampled 4813/5000 timestepssampled 5009/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 112/400 timestepssampled 199/400 timestepssampled 303/400 timestepssampled 908/400 timestepsEval_AverageReturn : 227.0
+Eval_StdReturn : 218.425048828125
+Eval_MaxReturn : 605.0
+Eval_MinReturn : 87.0
+Eval_AverageEpLen : 227.0
+Train_AverageReturn : 263.631591796875
+Train_StdReturn : 108.6065902709961
+Train_MaxReturn : 547.0
+Train_MinReturn : 51.0
+Train_AverageEpLen : 263.63157894736844
+Train_EnvstepsSoFar : 120542
+TimeSinceStart : 351.79939699172974
+Loss_Critic : 0.3860694169998169
+Loss_Actor : -0.05233114957809448
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 24 ************
+sampled 337/5000 timestepssampled 531/5000 timestepssampled 767/5000 timestepssampled 1190/5000 timestepssampled 1418/5000 timestepssampled 1917/5000 timestepssampled 2556/5000 timestepssampled 2916/5000 timestepssampled 3088/5000 timestepssampled 3369/5000 timestepssampled 3757/5000 timestepssampled 4078/5000 timestepssampled 4336/5000 timestepssampled 4541/5000 timestepssampled 4631/5000 timestepssampled 4750/5000 timestepssampled 4907/5000 timestepssampled 4993/5000 timestepssampled 5063/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 296/400 timestepssampled 611/400 timestepsEval_AverageReturn : 305.5
+Eval_StdReturn : 9.5
+Eval_MaxReturn : 315.0
+Eval_MinReturn : 296.0
+Eval_AverageEpLen : 305.5
+Train_AverageReturn : 266.47369384765625
+Train_StdReturn : 146.09022521972656
+Train_MaxReturn : 639.0
+Train_MinReturn : 70.0
+Train_AverageEpLen : 266.4736842105263
+Train_EnvstepsSoFar : 125605
+TimeSinceStart : 363.8477272987366
+Loss_Critic : 0.4254596531391144
+Loss_Actor : -0.10515210032463074
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 25 ************
+sampled 106/5000 timestepssampled 219/5000 timestepssampled 445/5000 timestepssampled 1319/5000 timestepssampled 1712/5000 timestepssampled 1983/5000 timestepssampled 2674/5000 timestepssampled 2783/5000 timestepssampled 2983/5000 timestepssampled 3162/5000 timestepssampled 3461/5000 timestepssampled 3512/5000 timestepssampled 3613/5000 timestepssampled 3877/5000 timestepssampled 4323/5000 timestepssampled 4548/5000 timestepssampled 4811/5000 timestepssampled 5385/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 501/400 timestepsEval_AverageReturn : 501.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 501.0
+Eval_MinReturn : 501.0
+Eval_AverageEpLen : 501.0
+Train_AverageReturn : 299.1666564941406
+Train_StdReturn : 215.6801300048828
+Train_MaxReturn : 874.0
+Train_MinReturn : 51.0
+Train_AverageEpLen : 299.1666666666667
+Train_EnvstepsSoFar : 130990
+TimeSinceStart : 376.7482030391693
+Loss_Critic : 0.3547481596469879
+Loss_Actor : -0.06170462444424629
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 26 ************
+sampled 63/5000 timestepssampled 157/5000 timestepssampled 714/5000 timestepssampled 898/5000 timestepssampled 1379/5000 timestepssampled 1519/5000 timestepssampled 2200/5000 timestepssampled 3200/5000 timestepssampled 3514/5000 timestepssampled 4514/5000 timestepssampled 4579/5000 timestepssampled 5052/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 65/400 timestepssampled 425/400 timestepsEval_AverageReturn : 212.5
+Eval_StdReturn : 147.5
+Eval_MaxReturn : 360.0
+Eval_MinReturn : 65.0
+Eval_AverageEpLen : 212.5
+Train_AverageReturn : 421.0
+Train_StdReturn : 325.48553466796875
+Train_MaxReturn : 1000.0
+Train_MinReturn : 63.0
+Train_AverageEpLen : 421.0
+Train_EnvstepsSoFar : 136042
+TimeSinceStart : 388.85224628448486
+Loss_Critic : 0.5870774388313293
+Loss_Actor : -0.04829535260796547
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 27 ************
+sampled 515/5000 timestepssampled 613/5000 timestepssampled 1116/5000 timestepssampled 2116/5000 timestepssampled 2311/5000 timestepssampled 2552/5000 timestepssampled 2745/5000 timestepssampled 2918/5000 timestepssampled 3075/5000 timestepssampled 3280/5000 timestepssampled 3601/5000 timestepssampled 4397/5000 timestepssampled 5395/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 648/400 timestepsEval_AverageReturn : 648.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 648.0
+Eval_MinReturn : 648.0
+Eval_AverageEpLen : 648.0
+Train_AverageReturn : 415.0
+Train_StdReturn : 310.27679443359375
+Train_MaxReturn : 1000.0
+Train_MinReturn : 98.0
+Train_AverageEpLen : 415.0
+Train_EnvstepsSoFar : 141437
+TimeSinceStart : 402.3335461616516
+Loss_Critic : 0.3733271360397339
+Loss_Actor : -0.04449659585952759
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 28 ************
+sampled 269/5000 timestepssampled 1269/5000 timestepssampled 1556/5000 timestepssampled 2171/5000 timestepssampled 3171/5000 timestepssampled 3352/5000 timestepssampled 3792/5000 timestepssampled 4251/5000 timestepssampled 5251/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 583.4444580078125
+Train_StdReturn : 317.3379211425781
+Train_MaxReturn : 1000.0
+Train_MinReturn : 181.0
+Train_AverageEpLen : 583.4444444444445
+Train_EnvstepsSoFar : 146688
+TimeSinceStart : 415.77984619140625
+Loss_Critic : 0.28087422251701355
+Loss_Actor : -0.06747576594352722
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 29 ************
+sampled 420/5000 timestepssampled 698/5000 timestepssampled 1343/5000 timestepssampled 2343/5000 timestepssampled 2992/5000 timestepssampled 3773/5000 timestepssampled 4773/5000 timestepssampled 4939/5000 timestepssampled 5429/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 603.2222290039062
+Train_StdReturn : 277.61553955078125
+Train_MaxReturn : 1000.0
+Train_MinReturn : 166.0
+Train_AverageEpLen : 603.2222222222222
+Train_EnvstepsSoFar : 152117
+TimeSinceStart : 429.98329854011536
+Loss_Critic : 0.22445622086524963
+Loss_Actor : -0.05764530971646309
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 30 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3582/5000 timestepssampled 4582/5000 timestepssampled 5582/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 930.3333129882812
+Train_StdReturn : 155.77940368652344
+Train_MaxReturn : 1000.0
+Train_MinReturn : 582.0
+Train_AverageEpLen : 930.3333333333334
+Train_EnvstepsSoFar : 157699
+TimeSinceStart : 444.32392382621765
+Loss_Critic : 0.3519686162471771
+Loss_Actor : -0.012191889807581902
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 31 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3538/5000 timestepssampled 3779/5000 timestepssampled 4577/5000 timestepssampled 5577/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 702/400 timestepsEval_AverageReturn : 702.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 702.0
+Eval_MinReturn : 702.0
+Eval_AverageEpLen : 702.0
+Train_AverageReturn : 796.7142944335938
+Train_StdReturn : 278.0168151855469
+Train_MaxReturn : 1000.0
+Train_MinReturn : 241.0
+Train_AverageEpLen : 796.7142857142857
+Train_EnvstepsSoFar : 163276
+TimeSinceStart : 457.9864957332611
+Loss_Critic : 0.2733200490474701
+Loss_Actor : 0.0027963684406131506
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 32 ************
+sampled 282/5000 timestepssampled 691/5000 timestepssampled 1591/5000 timestepssampled 2591/5000 timestepssampled 3377/5000 timestepssampled 3806/5000 timestepssampled 4083/5000 timestepssampled 4726/5000 timestepssampled 5719/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 240/400 timestepssampled 1111/400 timestepsEval_AverageReturn : 555.5
+Eval_StdReturn : 315.5
+Eval_MaxReturn : 871.0
+Eval_MinReturn : 240.0
+Eval_AverageEpLen : 555.5
+Train_AverageReturn : 635.4444580078125
+Train_StdReturn : 279.0384826660156
+Train_MaxReturn : 1000.0
+Train_MinReturn : 277.0
+Train_AverageEpLen : 635.4444444444445
+Train_EnvstepsSoFar : 168995
+TimeSinceStart : 472.90101146698
+Loss_Critic : 0.10849010944366455
+Loss_Actor : -0.0028738868422806263
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 33 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3502/5000 timestepssampled 3781/5000 timestepssampled 4457/5000 timestepssampled 5192/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 505/400 timestepsEval_AverageReturn : 505.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 505.0
+Eval_MinReturn : 505.0
+Eval_AverageEpLen : 505.0
+Train_AverageReturn : 741.7142944335938
+Train_StdReturn : 260.7860412597656
+Train_MaxReturn : 1000.0
+Train_MinReturn : 279.0
+Train_AverageEpLen : 741.7142857142857
+Train_EnvstepsSoFar : 174187
+TimeSinceStart : 485.75061774253845
+Loss_Critic : 0.17555738985538483
+Loss_Actor : -0.016660338267683983
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 34 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 179187
+TimeSinceStart : 498.782546043396
+Loss_Critic : 0.34052836894989014
+Loss_Actor : 0.011870287358760834
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 35 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 184187
+TimeSinceStart : 511.77157640457153
+Loss_Critic : 0.3377037048339844
+Loss_Actor : -0.0011169364443048835
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 36 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 189187
+TimeSinceStart : 524.8610203266144
+Loss_Critic : 0.32767191529273987
+Loss_Actor : 0.0011877616634592414
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 37 ************
+sampled 680/5000 timestepssampled 1680/5000 timestepssampled 2680/5000 timestepssampled 3680/5000 timestepssampled 4680/5000 timestepssampled 4879/5000 timestepssampled 5879/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 839.8571166992188
+Train_StdReturn : 283.9720458984375
+Train_MaxReturn : 1000.0
+Train_MinReturn : 199.0
+Train_AverageEpLen : 839.8571428571429
+Train_EnvstepsSoFar : 195066
+TimeSinceStart : 540.394303560257
+Loss_Critic : 0.3812018930912018
+Loss_Actor : -0.012736834585666656
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 38 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 200066
+TimeSinceStart : 553.4320032596588
+Loss_Critic : 0.3361419141292572
+Loss_Actor : -0.015548566356301308
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 39 ************
+sampled 779/5000 timestepssampled 1779/5000 timestepssampled 2779/5000 timestepssampled 3779/5000 timestepssampled 4779/5000 timestepssampled 5779/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 963.1666870117188
+Train_StdReturn : 82.36183166503906
+Train_MaxReturn : 1000.0
+Train_MinReturn : 779.0
+Train_AverageEpLen : 963.1666666666666
+Train_EnvstepsSoFar : 205845
+TimeSinceStart : 568.9380838871002
+Loss_Critic : 0.33699822425842285
+Loss_Actor : 0.009935662150382996
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 40 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 210845
+TimeSinceStart : 582.2137005329132
+Loss_Critic : 0.341406911611557
+Loss_Actor : -0.0017251529498025775
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 41 ************
+sampled 922/5000 timestepssampled 1922/5000 timestepssampled 2922/5000 timestepssampled 3922/5000 timestepssampled 4922/5000 timestepssampled 5922/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 987.0
+Train_StdReturn : 29.068883895874023
+Train_MaxReturn : 1000.0
+Train_MinReturn : 922.0
+Train_AverageEpLen : 987.0
+Train_EnvstepsSoFar : 216767
+TimeSinceStart : 597.2008571624756
+Loss_Critic : 0.3200475573539734
+Loss_Actor : -0.01940450444817543
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 42 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3195/5000 timestepssampled 4195/5000 timestepssampled 5195/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 865.8333129882812
+Train_StdReturn : 300.0057678222656
+Train_MaxReturn : 1000.0
+Train_MinReturn : 195.0
+Train_AverageEpLen : 865.8333333333334
+Train_EnvstepsSoFar : 221962
+TimeSinceStart : 610.5993092060089
+Loss_Critic : 0.345632940530777
+Loss_Actor : 0.005206185393035412
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 43 ************
+sampled 747/5000 timestepssampled 1747/5000 timestepssampled 2747/5000 timestepssampled 3747/5000 timestepssampled 4747/5000 timestepssampled 5747/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 589/400 timestepsEval_AverageReturn : 589.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 589.0
+Eval_MinReturn : 589.0
+Eval_AverageEpLen : 589.0
+Train_AverageReturn : 957.8333129882812
+Train_StdReturn : 94.28754425048828
+Train_MaxReturn : 1000.0
+Train_MinReturn : 747.0
+Train_AverageEpLen : 957.8333333333334
+Train_EnvstepsSoFar : 227709
+TimeSinceStart : 624.3059663772583
+Loss_Critic : 0.3336554169654846
+Loss_Actor : -0.009905814193189144
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 44 ************
+sampled 725/5000 timestepssampled 888/5000 timestepssampled 1888/5000 timestepssampled 2888/5000 timestepssampled 3888/5000 timestepssampled 4888/5000 timestepssampled 5888/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 842/400 timestepsEval_AverageReturn : 842.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 842.0
+Eval_MinReturn : 842.0
+Eval_AverageEpLen : 842.0
+Train_AverageReturn : 841.1428833007812
+Train_StdReturn : 292.658935546875
+Train_MaxReturn : 1000.0
+Train_MinReturn : 163.0
+Train_AverageEpLen : 841.1428571428571
+Train_EnvstepsSoFar : 233597
+TimeSinceStart : 639.1863565444946
+Loss_Critic : 0.3228761851787567
+Loss_Actor : -0.02161368727684021
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 45 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 4603/5000 timestepssampled 4893/5000 timestepssampled 5893/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 841.8571166992188
+Train_StdReturn : 263.66778564453125
+Train_MaxReturn : 1000.0
+Train_MinReturn : 290.0
+Train_AverageEpLen : 841.8571428571429
+Train_EnvstepsSoFar : 239490
+TimeSinceStart : 654.455194234848
+Loss_Critic : 0.4202945828437805
+Loss_Actor : -0.007398348767310381
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 46 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 4779/5000 timestepssampled 5779/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 963.1666870117188
+Train_StdReturn : 82.3618392944336
+Train_MaxReturn : 1000.0
+Train_MinReturn : 779.0
+Train_AverageEpLen : 963.1666666666666
+Train_EnvstepsSoFar : 245269
+TimeSinceStart : 669.1233859062195
+Loss_Critic : 0.37870925664901733
+Loss_Actor : -0.009992694482207298
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 47 ************
+sampled 701/5000 timestepssampled 1701/5000 timestepssampled 2084/5000 timestepssampled 3084/5000 timestepssampled 4084/5000 timestepssampled 4476/5000 timestepssampled 5476/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 782.2857055664062
+Train_StdReturn : 269.37957763671875
+Train_MaxReturn : 1000.0
+Train_MinReturn : 383.0
+Train_AverageEpLen : 782.2857142857143
+Train_EnvstepsSoFar : 250745
+TimeSinceStart : 683.6783399581909
+Loss_Critic : 0.36497554183006287
+Loss_Actor : -0.03400120139122009
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 48 ************
+sampled 160/5000 timestepssampled 738/5000 timestepssampled 1080/5000 timestepssampled 2080/5000 timestepssampled 3080/5000 timestepssampled 3485/5000 timestepssampled 4485/5000 timestepssampled 5485/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 759/400 timestepsEval_AverageReturn : 759.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 759.0
+Eval_MinReturn : 759.0
+Eval_AverageEpLen : 759.0
+Train_AverageReturn : 685.625
+Train_StdReturn : 331.6662292480469
+Train_MaxReturn : 1000.0
+Train_MinReturn : 160.0
+Train_AverageEpLen : 685.625
+Train_EnvstepsSoFar : 256230
+TimeSinceStart : 697.2851810455322
+Loss_Critic : 0.2813291549682617
+Loss_Actor : -0.006478512194007635
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 49 ************
+sampled 571/5000 timestepssampled 892/5000 timestepssampled 1196/5000 timestepssampled 1394/5000 timestepssampled 1812/5000 timestepssampled 2158/5000 timestepssampled 2826/5000 timestepssampled 3164/5000 timestepssampled 3550/5000 timestepssampled 4550/5000 timestepssampled 5550/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 504.5454406738281
+Train_StdReturn : 263.60760498046875
+Train_MaxReturn : 1000.0
+Train_MinReturn : 198.0
+Train_AverageEpLen : 504.54545454545456
+Train_EnvstepsSoFar : 261780
+TimeSinceStart : 711.9203145503998
+Loss_Critic : 0.17125940322875977
+Loss_Actor : -0.013600971549749374
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 50 ************
+sampled 388/5000 timestepssampled 1388/5000 timestepssampled 2286/5000 timestepssampled 2521/5000 timestepssampled 3521/5000 timestepssampled 3956/5000 timestepssampled 4956/5000 timestepssampled 5956/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 186/400 timestepssampled 1186/400 timestepsEval_AverageReturn : 593.0
+Eval_StdReturn : 407.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 186.0
+Eval_AverageEpLen : 593.0
+Train_AverageReturn : 744.5
+Train_StdReturn : 309.6683654785156
+Train_MaxReturn : 1000.0
+Train_MinReturn : 235.0
+Train_AverageEpLen : 744.5
+Train_EnvstepsSoFar : 267736
+TimeSinceStart : 728.0585014820099
+Loss_Critic : 0.239519402384758
+Loss_Actor : -0.002010130323469639
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 51 ************
+sampled 1000/5000 timestepssampled 1632/5000 timestepssampled 2602/5000 timestepssampled 3282/5000 timestepssampled 3896/5000 timestepssampled 4592/5000 timestepssampled 5592/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 798.8571166992188
+Train_StdReturn : 167.72718811035156
+Train_MaxReturn : 1000.0
+Train_MinReturn : 614.0
+Train_AverageEpLen : 798.8571428571429
+Train_EnvstepsSoFar : 273328
+TimeSinceStart : 742.329799413681
+Loss_Critic : 0.1847320944070816
+Loss_Actor : 0.0007406875374726951
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 52 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3209/5000 timestepssampled 4209/5000 timestepssampled 5209/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 868.1666870117188
+Train_StdReturn : 294.7882995605469
+Train_MaxReturn : 1000.0
+Train_MinReturn : 209.0
+Train_AverageEpLen : 868.1666666666666
+Train_EnvstepsSoFar : 278537
+TimeSinceStart : 756.233335018158
+Loss_Critic : 0.34894421696662903
+Loss_Actor : -0.0019085670355707407
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 53 ************
+sampled 1000/5000 timestepssampled 1504/5000 timestepssampled 2504/5000 timestepssampled 3504/5000 timestepssampled 4504/5000 timestepssampled 5504/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 917.3333129882812
+Train_StdReturn : 184.84828186035156
+Train_MaxReturn : 1000.0
+Train_MinReturn : 504.0
+Train_AverageEpLen : 917.3333333333334
+Train_EnvstepsSoFar : 284041
+TimeSinceStart : 770.3675174713135
+Loss_Critic : 0.33785560727119446
+Loss_Actor : 0.011980862356722355
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 54 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 289041
+TimeSinceStart : 784.3577213287354
+Loss_Critic : 0.3479098975658417
+Loss_Actor : 0.017975615337491035
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 55 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3782/5000 timestepssampled 4782/5000 timestepssampled 5782/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 963.6666870117188
+Train_StdReturn : 81.2437973022461
+Train_MaxReturn : 1000.0
+Train_MinReturn : 782.0
+Train_AverageEpLen : 963.6666666666666
+Train_EnvstepsSoFar : 294823
+TimeSinceStart : 799.8432722091675
+Loss_Critic : 0.3473129868507385
+Loss_Actor : 0.015712454915046692
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 56 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 299823
+TimeSinceStart : 813.7619638442993
+Loss_Critic : 0.3317455053329468
+Loss_Actor : -0.0019491881830617785
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 57 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 304823
+TimeSinceStart : 827.2189974784851
+Loss_Critic : 0.34480687975883484
+Loss_Actor : -0.012250695377588272
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 58 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 309823
+TimeSinceStart : 840.9048390388489
+Loss_Critic : 0.3459814786911011
+Loss_Actor : 0.007015066221356392
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 59 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 314823
+TimeSinceStart : 854.5713024139404
+Loss_Critic : 0.34679293632507324
+Loss_Actor : 0.004773837048560381
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 60 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 319823
+TimeSinceStart : 868.2551453113556
+Loss_Critic : 0.3185093402862549
+Loss_Actor : 0.0011446616845205426
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 61 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 324823
+TimeSinceStart : 881.6657083034515
+Loss_Critic : 0.3464334309101105
+Loss_Actor : -0.007354124449193478
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 62 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3805/5000 timestepssampled 4750/5000 timestepssampled 5750/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 958.3333129882812
+Train_StdReturn : 71.45317077636719
+Train_MaxReturn : 1000.0
+Train_MinReturn : 805.0
+Train_AverageEpLen : 958.3333333333334
+Train_EnvstepsSoFar : 330573
+TimeSinceStart : 896.949601650238
+Loss_Critic : 0.3323650360107422
+Loss_Actor : -0.013846807181835175
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 63 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 335573
+TimeSinceStart : 910.6538529396057
+Loss_Critic : 0.3470480144023895
+Loss_Actor : 0.00033551902743056417
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 64 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 340573
+TimeSinceStart : 924.2247803211212
+Loss_Critic : 0.34333834052085876
+Loss_Actor : 0.011357597075402737
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 65 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 345573
+TimeSinceStart : 937.9687066078186
+Loss_Critic : 0.34259265661239624
+Loss_Actor : -0.006139738019555807
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 66 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 350573
+TimeSinceStart : 951.5963938236237
+Loss_Critic : 0.3459673821926117
+Loss_Actor : 0.005843610968440771
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 67 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 2412/5000 timestepssampled 3412/5000 timestepssampled 3921/5000 timestepssampled 4921/5000 timestepssampled 5921/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 845.8571166992188
+Train_StdReturn : 245.09616088867188
+Train_MaxReturn : 1000.0
+Train_MinReturn : 412.0
+Train_AverageEpLen : 845.8571428571429
+Train_EnvstepsSoFar : 356494
+TimeSinceStart : 967.1945159435272
+Loss_Critic : 0.3449397087097168
+Loss_Actor : 0.0007085570832714438
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 68 ************
+sampled 199/5000 timestepssampled 758/5000 timestepssampled 1097/5000 timestepssampled 1618/5000 timestepssampled 2015/5000 timestepssampled 2209/5000 timestepssampled 3209/5000 timestepssampled 3349/5000 timestepssampled 3827/5000 timestepssampled 4413/5000 timestepssampled 4916/5000 timestepssampled 5616/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 591/400 timestepsEval_AverageReturn : 591.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 591.0
+Eval_MinReturn : 591.0
+Eval_AverageEpLen : 591.0
+Train_AverageReturn : 468.0
+Train_StdReturn : 230.92025756835938
+Train_MaxReturn : 1000.0
+Train_MinReturn : 140.0
+Train_AverageEpLen : 468.0
+Train_EnvstepsSoFar : 362110
+TimeSinceStart : 981.5766978263855
+Loss_Critic : 0.12761729955673218
+Loss_Actor : 0.0023093889467418194
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 69 ************
+sampled 742/5000 timestepssampled 1742/5000 timestepssampled 1942/5000 timestepssampled 2942/5000 timestepssampled 3942/5000 timestepssampled 4312/5000 timestepssampled 5312/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 758.8571166992188
+Train_StdReturn : 315.41693115234375
+Train_MaxReturn : 1000.0
+Train_MinReturn : 200.0
+Train_AverageEpLen : 758.8571428571429
+Train_EnvstepsSoFar : 367422
+TimeSinceStart : 996.164263010025
+Loss_Critic : 0.25470322370529175
+Loss_Actor : 0.007709930185228586
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 70 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 3391/5000 timestepssampled 4391/5000 timestepssampled 5391/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 898.5
+Train_StdReturn : 226.96090698242188
+Train_MaxReturn : 1000.0
+Train_MinReturn : 391.0
+Train_AverageEpLen : 898.5
+Train_EnvstepsSoFar : 372813
+TimeSinceStart : 1010.8054759502411
+Loss_Critic : 0.3910175561904907
+Loss_Actor : -0.026532720774412155
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 71 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 377813
+TimeSinceStart : 1024.5449788570404
+Loss_Critic : 0.35298702120780945
+Loss_Actor : 0.0035906496923416853
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 72 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 382813
+TimeSinceStart : 1038.275880098343
+Loss_Critic : 0.3517681956291199
+Loss_Actor : 0.005838881712406874
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 73 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 387813
+TimeSinceStart : 1052.0698029994965
+Loss_Critic : 0.3508402705192566
+Loss_Actor : -0.007680490147322416
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 74 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 392813
+TimeSinceStart : 1065.8480525016785
+Loss_Critic : 0.3485323190689087
+Loss_Actor : -0.013493722304701805
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 75 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 397813
+TimeSinceStart : 1079.4050204753876
+Loss_Critic : 0.34506955742836
+Loss_Actor : -0.002954940777271986
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 76 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 402813
+TimeSinceStart : 1093.1106679439545
+Loss_Critic : 0.3478328585624695
+Loss_Actor : 0.005025619175285101
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 77 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 407813
+TimeSinceStart : 1106.882621049881
+Loss_Critic : 0.34735894203186035
+Loss_Actor : -0.008226473815739155
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 78 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 412813
+TimeSinceStart : 1120.8370389938354
+Loss_Critic : 0.34727293252944946
+Loss_Actor : -0.007018817588686943
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 79 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 417813
+TimeSinceStart : 1134.7152171134949
+Loss_Critic : 0.34269067645072937
+Loss_Actor : -0.026878071948885918
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 80 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 422813
+TimeSinceStart : 1147.9277913570404
+Loss_Critic : 0.34764519333839417
+Loss_Actor : -0.004770927131175995
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 81 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 427813
+TimeSinceStart : 1161.5389533042908
+Loss_Critic : 0.3473461866378784
+Loss_Actor : -0.0088047431781888
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 82 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 432813
+TimeSinceStart : 1175.2121562957764
+Loss_Critic : 0.3473149538040161
+Loss_Actor : 0.0016650485340505838
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 83 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 437813
+TimeSinceStart : 1188.9014949798584
+Loss_Critic : 0.3469643294811249
+Loss_Actor : 0.006169121712446213
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 84 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 442813
+TimeSinceStart : 1202.5755672454834
+Loss_Critic : 0.3473074734210968
+Loss_Actor : -0.01290469616651535
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 85 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 447813
+TimeSinceStart : 1216.480010509491
+Loss_Critic : 0.34378108382225037
+Loss_Actor : -0.000746463774703443
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 86 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 523/400 timestepsEval_AverageReturn : 523.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 523.0
+Eval_MinReturn : 523.0
+Eval_AverageEpLen : 523.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 452813
+TimeSinceStart : 1228.9147894382477
+Loss_Critic : 0.3456188440322876
+Loss_Actor : 0.007777784485369921
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 87 ************
+sampled 1000/5000 timestepssampled 1199/5000 timestepssampled 1876/5000 timestepssampled 2686/5000 timestepssampled 2870/5000 timestepssampled 3080/5000 timestepssampled 4080/5000 timestepssampled 5080/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 101/400 timestepssampled 218/400 timestepssampled 319/400 timestepssampled 425/400 timestepsEval_AverageReturn : 106.25
+Eval_StdReturn : 6.533566951751709
+Eval_MaxReturn : 117.0
+Eval_MinReturn : 101.0
+Eval_AverageEpLen : 106.25
+Train_AverageReturn : 635.0
+Train_StdReturn : 354.6452331542969
+Train_MaxReturn : 1000.0
+Train_MinReturn : 184.0
+Train_AverageEpLen : 635.0
+Train_EnvstepsSoFar : 457893
+TimeSinceStart : 1241.4875123500824
+Loss_Critic : 0.2231074720621109
+Loss_Actor : 0.005295189097523689
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 88 ************
+sampled 84/5000 timestepssampled 176/5000 timestepssampled 269/5000 timestepssampled 389/5000 timestepssampled 529/5000 timestepssampled 650/5000 timestepssampled 782/5000 timestepssampled 875/5000 timestepssampled 993/5000 timestepssampled 1080/5000 timestepssampled 1174/5000 timestepssampled 1265/5000 timestepssampled 1368/5000 timestepssampled 1491/5000 timestepssampled 1570/5000 timestepssampled 1720/5000 timestepssampled 1867/5000 timestepssampled 1963/5000 timestepssampled 2051/5000 timestepssampled 2169/5000 timestepssampled 2296/5000 timestepssampled 2418/5000 timestepssampled 2514/5000 timestepssampled 2616/5000 timestepssampled 2784/5000 timestepssampled 2898/5000 timestepssampled 3009/5000 timestepssampled 3111/5000 timestepssampled 3207/5000 timestepssampled 3296/5000 timestepssampled 3407/5000 timestepssampled 3491/5000 timestepssampled 3595/5000 timestepssampled 3738/5000 timestepssampled 3826/5000 timestepssampled 3911/5000 timestepssampled 4026/5000 timestepssampled 4122/5000 timestepssampled 4236/5000 timestepssampled 4318/5000 timestepssampled 4424/5000 timestepssampled 4545/5000 timestepssampled 4662/5000 timestepssampled 4774/5000 timestepssampled 4916/5000 timestepssampled 5008/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 108.86956787109375
+Train_StdReturn : 20.573945999145508
+Train_MaxReturn : 168.0
+Train_MinReturn : 79.0
+Train_AverageEpLen : 108.8695652173913
+Train_EnvstepsSoFar : 462901
+TimeSinceStart : 1255.5211379528046
+Loss_Critic : 0.26949790120124817
+Loss_Actor : -0.05702514573931694
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 89 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 467901
+TimeSinceStart : 1268.9141025543213
+Loss_Critic : 0.3548830449581146
+Loss_Actor : -0.0042070806957781315
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 90 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 472901
+TimeSinceStart : 1282.5909345149994
+Loss_Critic : 0.35031360387802124
+Loss_Actor : -0.009841939434409142
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 91 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 477901
+TimeSinceStart : 1296.6270105838776
+Loss_Critic : 0.3512497842311859
+Loss_Actor : -0.0012327964650467038
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 92 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 482901
+TimeSinceStart : 1310.4196207523346
+Loss_Critic : 0.34883224964141846
+Loss_Actor : 0.011861645616590977
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 93 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 487901
+TimeSinceStart : 1324.1291391849518
+Loss_Critic : 0.3478964865207672
+Loss_Actor : 0.006121734622865915
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 94 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 492901
+TimeSinceStart : 1337.8535180091858
+Loss_Critic : 0.34763064980506897
+Loss_Actor : 0.0028066847007721663
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 95 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 497901
+TimeSinceStart : 1351.71639919281
+Loss_Critic : 0.3450472056865692
+Loss_Actor : -0.0007033874280750751
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 96 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 502901
+TimeSinceStart : 1365.5984406471252
+Loss_Critic : 0.34738561511039734
+Loss_Actor : -0.005580895114690065
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 97 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 507901
+TimeSinceStart : 1379.138206243515
+Loss_Critic : 0.3473598062992096
+Loss_Actor : -0.011784758418798447
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 98 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 512901
+TimeSinceStart : 1393.1941595077515
+Loss_Critic : 0.34734436869621277
+Loss_Actor : 0.0030749018769711256
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 99 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 517901
+TimeSinceStart : 1407.3082749843597
+Loss_Critic : 0.34734809398651123
+Loss_Actor : 0.013278741389513016
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+
+
+
+********** Iteration 100 ************
+sampled 1000/5000 timestepssampled 2000/5000 timestepssampled 3000/5000 timestepssampled 4000/5000 timestepssampled 5000/5000 timesteps
+Training agent...
+
+Beginning logging procedure...
+
+Collecting data for eval...
+sampled 1000/400 timestepsEval_AverageReturn : 1000.0
+Eval_StdReturn : 0.0
+Eval_MaxReturn : 1000.0
+Eval_MinReturn : 1000.0
+Eval_AverageEpLen : 1000.0
+Train_AverageReturn : 1000.0
+Train_StdReturn : 0.0
+Train_MaxReturn : 1000.0
+Train_MinReturn : 1000.0
+Train_AverageEpLen : 1000.0
+Train_EnvstepsSoFar : 522901
+TimeSinceStart : 1421.285629272461
+Loss_Critic : 0.34734323620796204
+Loss_Actor : 0.0071568298153579235
+Initial_DataCollection_AverageReturn : 9.18165111541748
+Done logging...
+
+

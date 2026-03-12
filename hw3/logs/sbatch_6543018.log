@@ -1,0 +1,21 @@
+════════════════════════════════════════════════════════
+  Launching all HW3 experiments in parallel
+  Logs: logs/<exp_name>.log
+════════════════════════════════════════════════════════
+  Launching DQN: q1_dqn_1
+  Launching DQN: q1_dqn_2
+  Launching DQN: q1_dqn_3
+  Launching DQN: q1_doubledqn_1
+  Launching DQN: q1_doubledqn_2
+  Launching DQN: q1_doubledqn_3
+  Launching AC: q2_10_10
+  Launching AC: q3_10_10
+  All launched. Waiting for completion...
+  All experiments finished.
+  Generating plots...
+Saved plot -> plots/q1_dqn_vs_ddqn.png
+Saved plot -> plots/q2_cartpole.png
+Saved plot -> plots/q3_inverted_pendulum.png
+════════════════════════════════════════════════════════
+  All done. Plots saved to plots/
+════════════════════════════════════════════════════════

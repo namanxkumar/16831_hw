@@ -1,0 +1,14 @@
+════════════════════════════════════════════════════════
+  Launching all HW3 experiments in parallel
+  Logs: logs/<exp_name>.log
+════════════════════════════════════════════════════════
+  Launching DQN: q1_dqn_1
+  Launching DQN: q1_dqn_2
+  Launching DQN: q1_dqn_3
+  Launching DQN: q1_doubledqn_1
+  Launching DQN: q1_doubledqn_2
+  Launching DQN: q1_doubledqn_3
+  Launching AC: q2_10_10
+  Launching AC: q3_10_10
+  All launched. Waiting for completion...
+slurmstepd: error: *** JOB 6542532 ON babel-p9-32 CANCELLED AT 2026-03-11T18:50:07 ***
