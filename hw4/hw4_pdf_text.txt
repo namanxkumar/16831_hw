@@ -1,0 +1,424 @@
+===== PAGE 1 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Assignment 4: Model-Based RL and Exploration
+Due April 1st, 11:59 pm
+Total points: 4+4+3+4=15, bonus 2.5(Q5)+2.5(Q6)=5
+1 Introduction
+This assignment requires you to implement and evaluate a pipeline for model based learning and exploration.
+You will first implement a pipeline for model-based reinforcement learning which consists of two main parts:
+learning a dynamics function to model observed state transitions, and then using predictions from that model
+in some way to decide what to do. You will then implement an exploration method called random network
+distillation.
+2 Model-Based Reinforcement Learning
+We will now provide a brief overview of model-based reinforcement learning (MBRL), and the specific type of
+MBRL you will be implementing in this homework.
+MBRL consists primarily of two aspects: (1) learning a dynamics model and (2) using the learned dynamics
+models to plan and execute actions that minimize a cost function (or maximize a reward function).
+2.1 Dynamics Model
+In this assignment, you will learn a neural network dynamics modelf θ of the form
+ˆ∆t+1 =f θ(st,a t) (1)
+which predicts the change in state given the current state and action. So given the prediction ˆ∆t+1, you can
+generate the next prediction with
+ˆst+1 =s t + ˆ∆t+1.(2)
+See the previously referenced paper for intuition on why we might want our network to predict state differences,
+instead of directly predicting next state.
+You will trainf θ in a standard supervised learning setup, by performing gradient descent on the following
+objective:
+L(θ) =
+X
+(st,at,st+1)∈D
+∥(st+1 −s t)−f θ(st,a t)∥2
+2 (3)
+=
+X
+(st,at,st+1)∈D
+∥∆t+1 − ˆ∆t+1∥2
+2 (4)
+In practice, it’s helpful to normalize the target of a neural network. So in the code, we’ll train the network to
+predict anormalizedversion of the change in state, as in
+L(θ) =
+X
+(st,at,st+1)∈D
+∥Normalize(st+1 −s t)−f θ(st,a t)∥2
+2.(5)
+Sincef θ is trained to predict the normalized state difference, you generate the next prediction with
+ˆst+1 =s t + Unnormalize(fθ(st,a t)).(6)
+
+===== PAGE 2 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+2.2 Action Selection
+Given the learned dynamics model, we now want to select and execute actions that minimize a known cost
+function (or maximize a known reward function). Ideally, you would calculate these actions by solving the
+following optimization:
+a∗
+t = arg min
+at:∞
+∞X
+t′=t
+c(ˆst′,a t′) where ˆst′+1 = ˆst′ +f θ(ˆst′,a t′).(7)
+However, solving Eqn. 7 is impractical for two reasons: (1) planning over an infinite sequence of actions is
+impossible and (2) the learned dynamics model is imperfect, so using it to plan in such an open-loop manner
+will lead to accumulating errors over time and planning far into the future will become very inaccurate.
+Instead, one alternative is to solve the following gradient-free optimization problem:
+A∗ = arg min
+{A(0),...,A(K−1) }
+t+H−1X
+t′=t
+c(ˆst′,a t′) s.t. ˆst′+1 = ˆst′ +f θ(ˆst′,a t′),(8)
+in whichA (k) = (a (k)
+t , . . . , a(k)
+t+H−1) are each a random action sequence of lengthH. What Eqn. 8 says is
+to considerKrandom action sequences of lengthH, predict the result (i.e., future states) of taking each of
+these action sequences using the learned dynamics modelf θ, evaluate the cost/reward associated with each
+candidate action sequence, and select the best action sequence. Note that this approach only plansHsteps
+into the future, which is desirable because it prevent accumulating model error, but is also limited because it
+may not be sufficient for solving long-horizon tasks.
+A better alternative to this random-shooting optimization approach is the cross-entropy method (CEM), which
+is similar to random-shooting, but with iterative improvement of the distribution of actions that are sampled
+from. We first randomly initialize a set ofKaction sequencesA (0), ..., A(K−1), like in random-shooting.
+Then, we choose theJsequences with the highest predicted sum of discounted rewards as the ”elite” action
+sequences. We then fit a diagonal Gaussian with the same mean and variance as the ”elite” action sequences,
+and use this as our action sampling distribution for the next iteration. After repeating this processMtimes,
+we take the final mean of the Gaussian as the optimized action sequence. See Section 3.3 in this paper for
+more details.
+Additionally, since our model is imperfect and things will never go perfectly according to plan, we adopt a
+model predictive control (MPC) approach, where at every time step we perform random-shooting or CEM to
+select the bestH-step action sequence, but then we execute only the first action from that sequence before
+replanning again at the next time step using updated state information. This reduces the effect of compounding
+errors when using our approximate dynamics model to plan too far into the future.
+2.3 On-Policy Data Collection
+Although MBRL is in theory off-policy—meaning it can learn from any data—in practice it will perform
+poorly if you don’t have on-policy data. In other words, if a model is trained on only randomly-collected data,
+it will (in most cases) be insufficient to describe the parts of the state space that we may actually care about.
+We can therefore use on-policy data collection in an iterative algorithm to improve overall task performance.
+This is summarized as follows:
+
+===== PAGE 3 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Algorithm 1Model-Based RL with On-Policy Data
+Run base policyπ 0(at,s t) (e.g., random policy) to collectD={(s t,a t,s t+1)}
+whilenot donedo
+Trainf θ usingD(Eqn. 4)
+st ←current agent state
+forrollout numberm= 0toMdo
+fortimestept= 0toTdo
+A∗ =π MPC(at,s t) whereπ MPC is obtained from random-shooting or CEM
+at ←first action inA ∗
+Executea t and proceed to next states t+1
+Add (st,a t,s t+1) toD
+end
+end
+end
+2.4 Ensembles
+A simple and effective way to improve predictions is to use an ensemble of models. The idea is simple: rather
+than training one networkf θ to make predictions, we’ll trainNindependently initialized networks{f θn }N
+n=1,
+and average their predictions to get your final predictions
+f(s t, at) = 1
+N
+NX
+n=1
+fθn(st, at).(9)
+In this assignment, you’ll train an ensemble of networks and compare how different values ofNeffect the
+model’s performance.
+3 Random Network Distillation (RND) Algorithm
+A common way of doing exploration is to visit states with a large prediction error of some quantity, for instance,
+the TD error or even random functions. The RND algorithm, as covered in Lecture 13, aims at encouraging
+exploration by asking the exploration policy to more frequently undertake transitions where the prediction
+error of a random neural network function is high. Formally, letf ∗
+θ (s′) be a randomly chosen vector-valued
+function represented by a neural network. RND trains another neural network, ˆfϕ(s′) to match the predictions
+off ∗
+θ (s′) under the distribution of datapoints in the buffer, as shown below:
+ϕ∗ = arg min
+ϕ
+Es,a,s′∼D
+
+|| ˆfϕ(s′)−f ∗
+θ (s′)||| {z }
+Eϕ(s′)
+
+ .(10)
+If a transition (s, a, s ′) is in the distribution of the data buffer, the prediction errorE ϕ(s′) is expected to
+be small. On the other hand, for all unseen state-action tuples it is expected to be large. To utilize this
+prediction error as a reward bonus for exploration, RND trains two critics – anexploitation critic,Q R(s, a),
+and anexploration critic,Q E(s, a), where the exploitation critic estimates the return of the policy under the
+actual reward function and the exploration critic estimates the return of the policy under the reward bonus.
+In practice, we normalize error before passing it into the exploration critic, as this value can vary widely in
+magnitude across states leading to poor optimization dynamics.
+In this problem, we represent the random functions utilized by RND,f ∗
+θ (s′) and ˆfϕ(s′) via random neural net-
+works. To prevent the neural networks from having zero prediction error right from the beginning, we initialize
+the networks using two different initialization schemes marked asinit_method_1andinit_method_2in
+hw4_part2/exploration/rnd_model.py.
+We will implement a variant of RND exploration that will not utilize the exploration reward and the environ-
+ment reward separately, but will use a combination of both rewards for exploration as compared to performing
+
+===== PAGE 4 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+fully “supervised” exploration via the RND critic and then finetune the resulting exploitation policy in the
+environment. To do so, you will modify theexploration_criticto utilize a weighted sum of the RND
+bonus and the environment reward of the form:
+rmixed = explore weight×r explore + exploit weight×r env
+The weighting is controlled inagents/explore_or_exploit_agent.py. The exploitation critic is only
+trained on the environment reward and is used for evaluation.
+3.1 Environments
+Unlike previous assignments, we will consider some stochastic dynamics, discrete-action gridworld environ-
+ments in this assignment. The three gridworld environments you will need for the graded part of this assign-
+ment are of varying difficulty:easy,mediumandhard. A picture of these environments is shown below. The
+easy environment requires following two hallways with a right turn in the middle. The medium environment
+is a maze requiring multiple turns. The hard environment is a four-rooms task which requires navigating
+between multiple rooms through narrow passages to reach the goal location.
+4 Code
+You will implement the MBRL algorithm and RND algorithm described in the previous sections.
+4.1 Overview
+Obtain the code fromhttps://github.com/cmuroboticsdrl/16831-S26-HW/tree/main/hw4.
+For the first five problems of the assignment, you will add code to the following three files:
+•rob831/hw4_part1/agents/mb_agent.py
+•rob831/hw4_part1/models/ff_model.py
+•rob831/hw4_part1/policies/MPC_policy.py
+You will also need to edit these files by copying code from past homeworks or Piazza:
+•rob831/hw4_part1/infrastructure/rl_trainer.py
+•rob831/hw4_part1/infrastructure/utils.py
+
+===== PAGE 5 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 1 [4pts]
+What you will implement:
+Collect a large dataset by executing random actions. Train a neural network dynamics model on this fixed
+dataset and visualize the resulting predictions. The implementation that you will do here will be for training
+the dynamics model, and comparing its predictions against ground truth. You will be reusing the utilities you
+wrote for HW1 (or Piazza) for the data collection part (look for “get this from Piazza” markers).
+What code files to fill in:
+1.rob831/hw4_part1/agents/mb_agent.py
+2.rob831/hw4_part1/models/ff_model.py
+3.rob831/hw4_part1/infrastructure/utils.py
+4.rob831/hw4_part1/policies/MPC_policy.py(just one line labeledTODO(Q1)for now)
+What commands to run:
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q1_cheetah_n500_arch1x16 --env_name
+cheetah-hw4_part1-v0 --add_sl_noise --n_iter 1 --batch_size_initial 20000 --
+num_agent_train_steps_per_iter 500 --n_layers 1 --size 16 --scalar_log_freq -1 --video_log_freq
+-1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q1_cheetah_n10_arch2x200 --env_name
+cheetah-hw4_part1-v0 --add_sl_noise --n_iter 1 --batch_size_initial 20000 --
+num_agent_train_steps_per_iter 10 --n_layers 2 --size 200 --scalar_log_freq -1 --video_log_freq
+-1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q1_cheetah_n500_arch2x200 --env_name
+cheetah-hw4_part1-v0 --add_sl_noise --n_iter 1 --batch_size_initial 20000 --
+num_agent_train_steps_per_iter 500 --n_layers 2 --size 200 --scalar_log_freq -1 --
+video_log_freq -1 --mpc_action_sampling_strategy 'random'
+Your code will produce plots inside your logdir that illustrate your model prediction error (MPE). The code
+will also produce a plot of the losses over time. For the first command, the loss should be around 0.2 by the
+iteration 500. These plots illustrate, for a fixed action sequence, the difference between your model’s predic-
+tions (red) and the ground-truth states (green). Each plot corresponds to a different state element, and the
+title reports the mean mean-squared-error across all state elements. As illustrated in the commands above, try
+different neural network architectures as well different amounts of training. Compare the results by looking
+at the loss values (i.e., itr 0 losses.png), the qualitative model predictions (i.e., itr 0 predictions.png), as well
+as the quantitative MPE values (i.e., in the title of itr 0 predictions.png).
+What to submit: For this question, submit the qualitative model predictions (itr 0 predictions.png) for each
+of the three runs above. Comment on which model performs the best and why you think this might be the
+case.
+Note that for these qualitative model prediction plots, we intend for you to just copy the png images produced
+by the code.
+
+===== PAGE 6 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 2 [4pts]
+What will you implement:
+Action selection using your learned dynamics model and a given reward function.
+What code files to fill in:
+1.rob831/hw4_part1/policies/MPC_policy.py(all lines labeledTODO(Q2), i.e. everything ex-
+cept the CEM section)
+What commands to run:
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q2_obstacles_singleiteration --env_name
+obstacles-hw4_part1-v0 --add_sl_noise --num_agent_train_steps_per_iter 25 --n_iter 1 --
+batch_size_initial 5000 --batch_size 1000 --mpc_horizon 15 --video_log_freq -1 --
+mpc_action_sampling_strategy 'random'
+Recall the overall flow of our rl trainer.py. We first collect data with our policy (which starts as random), we
+then train our model on that collected data, and we then evaluate the resulting MPC policy (which now uses
+the trained model). To verify that your MPC is indeed doing reasonable action selection, run the command
+above and compare Train AverageReturn (which was the execution of random actions) to Eval AverageReturn
+(which was the execution of MPC using a model that was trained on the randomly collected training data). You
+can expect Train AverageReturn to be around -160 and Eval AverageReturn to be around -70 to -50.
+What to submit:
+Submit this run as part of your run logs, and include a plot of Train AverageReturn and Eval AverageReturn
+in your pdf. Note that these will just be single dots on the plot, since we ran this for just 1 iteration.
+
+===== PAGE 7 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 3 [3pts]
+What will you implement:
+MBRL algorithm with on-policy data collection and iterative model training.
+What code files to fill in:
+None. You should already have done everything that you need, because rl trainer.py already aggregates
+your collected data into a replay buffer. Thus, iterative training means to just train on our growing replay
+buffer while collecting new data at each iteration using the most newly trained model.
+What commands to run:
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q3_obstacles --env_name obstacles-
+hw4_part1-v0 --add_sl_noise --num_agent_train_steps_per_iter 25 --batch_size_initial 5000 --
+batch_size 1000 --mpc_horizon 15 --n_iter 16 --video_log_freq -1 --mpc_action_sampling_strategy
+'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q3_reacher --env_name reacher-hw4_part1-v0
+--add_sl_noise --mpc_horizon 15 --num_agent_train_steps_per_iter 1000 --batch_size_initial
+5000 --batch_size 5000 --n_iter 16 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q3_cheetah --env_name cheetah-hw4_part1-v0
+--mpc_horizon 15 --add_sl_noise --num_agent_train_steps_per_iter 1500 --batch_size_initial
+5000 --batch_size 5000 --n_iter 16 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+You should expect rewards of around -25 to -20 for the obstacles env (takes less than 40 minutes), rewards of
+around -250 to -300 for the reacher env (takes 2-3 hours), and rewards of around 250-350 for the cheetah env
+takes 3-4 hours. All numbers assume no GPU.
+What to submit:
+Submit these runs as part of your run logs, and include the performance plots in your pdf.
+
+===== PAGE 8 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 4 [4pts]
+What will you implement:
+You will compare the performance of your MBRL algorithm as a function of three hyperparameters: the
+number of models in your ensemble, the number of random action sequences considered during each action
+selection, and the MPC planning horizon.
+What code files to fill in:
+None.
+What commands to run:
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_horizon5 --env_name reacher-
+hw4_part1-v0 --add_sl_noise --mpc_horizon 5 --mpc_action_sampling_strategy 'random' --
+num_agent_train_steps_per_iter 1000 --batch_size 800 --n_iter 15 --video_log_freq -1 --
+mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_horizon15 --env_name reacher-
+hw4_part1-v0 --add_sl_noise --mpc_horizon 15 --num_agent_train_steps_per_iter 1000 --batch_size
+800 --n_iter 15 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_horizon30 --env_name reacher-
+hw4_part1-v0 --add_sl_noise --mpc_horizon 30 --num_agent_train_steps_per_iter 1000 --batch_size
+800 --n_iter 15 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_numseq100 --env_name reacher-
+hw4_part1-v0 --add_sl_noise --mpc_horizon 10 --num_agent_train_steps_per_iter 1000 --batch_size
+800 --n_iter 15 --mpc_num_action_sequences 100 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_numseq1000 --env_name reacher-
+hw4_part1-v0 --add_sl_noise --mpc_horizon 10 --num_agent_train_steps_per_iter 1000 --batch_size
+800 --n_iter 15 --video_log_freq -1 --mpc_num_action_sequences 1000 --
+mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_ensemble1 --env_name reacher-
+hw4_part1-v0 --ensemble_size 1 --add_sl_noise --mpc_horizon 10 --num_agent_train_steps_per_iter
+1000 --batch_size 800 --n_iter 15 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_ensemble3 --env_name reacher-
+hw4_part1-v0 --ensemble_size 3 --add_sl_noise --mpc_horizon 10 --num_agent_train_steps_per_iter
+1000 --batch_size 800 --n_iter 15 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q4_reacher_ensemble5 --env_name reacher-
+hw4_part1-v0 --ensemble_size 5 --add_sl_noise --mpc_horizon 10 --num_agent_train_steps_per_iter
+1000 --batch_size 800 --n_iter 15 --video_log_freq -1 --mpc_action_sampling_strategy 'random'
+What to submit:
+1) Submit these runs as part of your run logs.
+2) Include the following plots (as well as captions that describe your observed trends) of the following:
+•effect of ensemble size
+•effect of the number of candidate action sequences
+•efffect of planning horizon
+Be sure to include titles and legends on all of your plots, and be sure to generate your plots by extracting the
+corresponding performance numbers from your saved tensorboard eventfiles.
+
+===== PAGE 9 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 5 (Bonus) [2.5pts]
+What will you implement:
+You will compare the performance of your MBRL algorithm with action selecting performed by random-
+shooting (what you have done up to this point) and CEM.
+Because CEM can be much slower than random-shooting, we will only run MBRL for 5 iterations for this
+problem. We will try two hyperparameter settings for CEM and compare their performance to random-
+shooting.
+What code files to fill in:
+1.rob831/hw4_part1/policies/MPC_policy.py
+What commands to run:
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q5_cheetah_random --env_name 'cheetah-
+hw4_part1-v0' --mpc_horizon 15 --add_sl_noise --num_agent_train_steps_per_iter 1500 --
+batch_size_initial 5000 --batch_size 5000 --n_iter 5 --video_log_freq -1 --
+mpc_action_sampling_strategy 'random'
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q5_cheetah_cem_2 --env_name 'cheetah-
+hw4_part1-v0' --mpc_horizon 15 --add_sl_noise --num_agent_train_steps_per_iter 1500 --
+batch_size_initial 5000 --batch_size 5000 --n_iter 5 --video_log_freq -1 --
+mpc_action_sampling_strategy 'cem' --cem_iterations 2
+python rob831/hw4_part1/scripts/run_hw4_mb.py --exp_name q5_cheetah_cem_4 --env_name 'cheetah-
+hw4_part1-v0' --mpc_horizon 15 --add_sl_noise --num_agent_train_steps_per_iter 1500 --
+batch_size_initial 5000 --batch_size 5000 --n_iter 5 --video_log_freq -1 --
+mpc_action_sampling_strategy 'cem' --cem_iterations 4
+You should expect rewards of 800 or higher when using CEM on the cheetah env. The final CEM run takes
+2-3 hours on GPU, and over twice as long without GPU, sowe recommend getting started early and
+using a GPU (e.g. on Colab) for this problem!
+What to submit:
+1) Submit these runs as part of your run logs.
+2) Include a plot comparing random-shooting with CEM, as well as captions that describe how CEM af-
+fects results for different numbers of sampling iterations (2 vs. 4).
+Be sure to include a title and legend on your plot, and be sure to generate your plot by extracting the corre-
+sponding performance numbers from your saved tensorboard eventfiles.
+
+===== PAGE 10 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Problem 6 (Bonus) [2.5pts]
+What code files to fill from previous assignments:
+1.rob831/hw4_part2/infrastructure/utils.py
+2.rob831/hw4_part2//infrastructure/rl_trainer.py
+3.rob831/hw4_part2/policies/MLP_policy.py
+4.rob831/hw4_part2//policies/argmax_policy.py
+5.crob831/hw4_part2/critics/dqn_critic.py
+What code files to fill in:
+1.rob831/hw4_part2/exploration/rnd_model.py
+2.rob831/hw4_part2/agents/explore_or_exploit_agent.py
+“Unsupervised” RND and exploration performance.Implement the RND algorithm and use the
+argmax policy with respect to the exploration critic to generate state-action tuples to populate the replay buffer
+for the algorithm. In the code, this happens before the number of iterations crossesnum_exploration_steps,
+which is set to 10k by default. You need to collect data using theArgmaxPolicypolicy which chooses to
+perform actions that maximize the exploration critic value.
+In experiment log directories, you will find heatmap plots visualizing the state density in the replay buffer, as
+well as other helpful visuals. You will find these in the experiment log directory, as they are output during
+training.You need to your code on the environments PointmassEasy-v0 and PointmassHard-v0.
+Compare RND exploration to random (epsilon-greedy) exploration.Include all the state density
+plots and a comparative evaluation of the learning curves obtained via RND and random exploration in your
+report.
+python rob831/hw4_part2/scripts/run_hw4_expl.py --env_name PointmassEasy-v0 --use_rnd
+--unsupervised_exploration --exp_name q6_env1_rnd
+python rob831/hw4_part2/scripts/run_hw4_expl.py --env_name PointmassEasy-v0
+--unsupervised_exploration --exp_name q6_env1_random
+python rob831/hw4_part2/scripts/run_hw4_expl.py --env_name PointmassHard-v0 --use_rnd
+--unsupervised_exploration --exp_name q6_env2_rnd
+python rob831/hw4_part2/scripts/run_hw4_expl.py --env_name PointmassHard-v0
+--unsupervised_exploration --exp_name q6_env2_random
+The density of the state-action pairs on thiseasyenvironment should be, as expected, more uniformly spread
+over the reachable parts of the environment (that are not occupied by walls) with RND as compared to random
+exploration where most of the density would be concentrated around the starting state.
+
+===== PAGE 11 =====
+CMU 16-831 Introduction to Robot Learning Spring 2026
+Submission
+4.2 Submitting the PDF
+Your report should be a PDF document containing the plots and responses indicated in the questions
+above.
+4.3 Submitting the Code and Logs
+In order to turn in your code and experiment logs, create a folder that contains the following:
+•A folder nameddatawith all the experiment runs from this assignment.Do not change the names
+originally assigned to the folders, as specified byexp namein the instructions.To minimize
+submissions size, please include runs with video logging disabled. If you would like to reuse your video
+logging runs, please see the script provided inrob831/hw4_part1/scripts/filter_events.py.
+•Therob831folder with all the.pyfiles, with the same names and directory structure as the original
+homework repository (not include thedata/folder). A plotting script should also be submitted, which
+should be a python script (or jupyter notebook) such that running it can generate all plots from your
+pdf. This plotting script should extract its values directly from the experiments in yourrun logsand
+should not have hardcoded reward values.
+As an example, the unzipped version of your submission should result in the following file structure.Make
+sure that the submit.zip file is below 15MB and that they include the prefixhw4 mb .
+submit.zip
+data
+hw4 q1 ...
+events.out.tfevents.1567529456.e3a096ac8ff4
+...
+rob831
+hw4 part1
+...
+...
+hw4 part2
+...
+...
+README.md
+...
+If you are a Mac user,do not use the default “Compress” option to create the zip. It creates artifacts
+that the autograder does not like. You may usezip -vr submit.zip submit -x " *.DS Store"from
+your terminal.
+Turn in your assignment on Gradescope. Upload the zip file with your code and log files toHW4 Code, and
+upload the PDF of your report toHW4.

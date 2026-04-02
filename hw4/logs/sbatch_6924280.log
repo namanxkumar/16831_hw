@@ -1,0 +1,44 @@
+=== Launching all HW4 experiments in parallel ===
+Launching MB: q1_cheetah_n500_arch1x16
+Launching MB: q1_cheetah_n10_arch2x200
+Launching MB: q1_cheetah_n500_arch2x200
+Launching MB: q2_obstacles_singleiteration
+Launching MB: q3_obstacles
+Launching MB: q3_reacher
+Launching MB: q3_cheetah
+Launching MB: q4_reacher_horizon5
+Launching MB: q4_reacher_horizon15
+Launching MB: q4_reacher_horizon30
+Launching MB: q4_reacher_numseq100
+Launching MB: q4_reacher_numseq1000
+Launching MB: q4_reacher_ensemble1
+Launching MB: q4_reacher_ensemble3
+Launching MB: q4_reacher_ensemble5
+Launching MB: q5_cheetah_random
+Launching MB: q5_cheetah_cem_2
+Launching MB: q5_cheetah_cem_4
+Launching EXPL: q6_env1_rnd
+Launching EXPL: q6_env1_random
+Launching EXPL: q6_env2_rnd
+Launching EXPL: q6_env2_random
+=== All runs completed. Generating plots... ===
+copied /home/namankum/16831_hw/hw4/rob831/data/hw4_q1_cheetah_n500_arch1x16_cheetah-hw4_part1-v0_01-04-2026_12-14-29/itr_0_predictions.png -> /home/namankum/16831_hw/hw4/plots/p1_plot1.png
+copied /home/namankum/16831_hw/hw4/rob831/data/hw4_q1_cheetah_n10_arch2x200_cheetah-hw4_part1-v0_01-04-2026_12-14-29/itr_0_predictions.png -> /home/namankum/16831_hw/hw4/plots/p1_plot2.png
+copied /home/namankum/16831_hw/hw4/rob831/data/hw4_q1_cheetah_n500_arch2x200_cheetah-hw4_part1-v0_01-04-2026_12-14-29/itr_0_predictions.png -> /home/namankum/16831_hw/hw4/plots/p1_plot3.png
+saved /home/namankum/16831_hw/hw4/plots/p2_plot1.png
+saved /home/namankum/16831_hw/hw4/plots/p3_plot1.png
+saved /home/namankum/16831_hw/hw4/plots/p3_plot2.png
+saved /home/namankum/16831_hw/hw4/plots/p3_plot3.png
+saved /home/namankum/16831_hw/hw4/plots/p4_plot1.png
+saved /home/namankum/16831_hw/hw4/plots/p4_plot2.png
+saved /home/namankum/16831_hw/hw4/plots/p4_plot3.png
+saved /home/namankum/16831_hw/hw4/plots/p5_plot1.png
+[warn] missing run for q6_env1_random
+[warn] missing run for q6_env1_rnd
+/home/namankum/16831_hw/hw4/generate_plots.py:49: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  plt.legend(fontsize=8)
+saved /home/namankum/16831_hw/hw4/plots/p6_plot1.png
+[warn] missing run for q6_env2_random
+[warn] missing run for q6_env2_rnd
+saved /home/namankum/16831_hw/hw4/plots/p6_plot2.png
+=== Done. Plots in /home/namankum/16831_hw/hw4/plots ===

@@ -5,12 +5,16 @@ from torch import nn
 import torch
 
 def init_method_1(model):
-    model.weight.data.uniform_()
-    model.bias.data.uniform_()
+    if hasattr(model, 'weight') and model.weight is not None:
+        model.weight.data.uniform_()
+    if hasattr(model, 'bias') and model.bias is not None:
+        model.bias.data.uniform_()
 
 def init_method_2(model):
-    model.weight.data.normal_()
-    model.bias.data.normal_()
+    if hasattr(model, 'weight') and model.weight is not None:
+        model.weight.data.normal_()
+    if hasattr(model, 'bias') and model.bias is not None:
+        model.bias.data.normal_()
 
 
 class RNDModel(nn.Module, BaseExplorationModel):
